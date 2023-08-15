@@ -18,8 +18,8 @@ const config: Config = {
         "bg-color": "#002529",
       },
       fontFamily: {
-        comfortaa: ["var(--font-comfortaa)", "sans-serif"],
-        azonix: ["var(--font-azonix)", "sans"],
+        azonix: ["var(--font-azonix)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans"],
       },
     },
   },

@@ -16,7 +16,7 @@ export default function Home() {
       <Team />
       <Newsletter />
       <Footer />
-      <div className='font-comfortaa'>This is a sample text</div>
+      <div className='font-montserrat'>This is a sample text</div>
       <div className='font-azonix'>This is a sample text</div>
     </>
   )
