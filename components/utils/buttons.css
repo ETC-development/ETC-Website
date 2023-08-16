@@ -1,3 +1,9 @@
 .btn-ellipse-blur {
-    @apply block absolute w-9 h-7 blur-[28px] m-auto z-0 transition-all group-hover:w-10 group-hover:h-9;
+    @apply block absolute w-9 h-7 blur-[28px] m-auto z-0 transition-all;
 }
+
+
+.hover-glow {
+    @apply group-hover:w-10 group-hover:h-9
+}
+
