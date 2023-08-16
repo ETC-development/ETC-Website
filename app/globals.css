@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 
 body {
     @apply bg-bg-color text-white p-2
@@ -19,20 +27,5 @@ p {
     @apply font-montserrat text-sm md:text-lg lg:text-xl 
 }
 
-.green_hue {
-    /* Green Hue  */
-    @apply absolute w-[200px] h-[200px] bg-[#00F186] opacity-80 blur-[250px]
-}
 
-.elipse {
-    /* Ellipse 16 */
-    @apply absolute left-[4.24%] right-[89.31%] top-[73.83%] bottom-[17.09%] bg-[#00F186] blur-[42px]
-}
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
