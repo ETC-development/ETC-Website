@@ -20,6 +20,7 @@ const config: Config = {
       fontFamily: {
         azonix: ["var(--font-azonix)", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "sans"],
+        comfortaa: ["var(--font-comfortaa)", "sans"],
       },
     },
   },
