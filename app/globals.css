@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+
+
 *,
 *::before,
 *::after {
@@ -27,10 +29,6 @@ p {
     @apply font-montserrat text-sm md:text-lg lg:text-xl 
 }
 
-.green_hue {
-    /* Green Hue  */
-    @apply absolute w-[200px] h-[200px] bg-[#00F186] opacity-80 blur-[250px]
-}
 
 .elipse {
     /* Ellipse 16 */
