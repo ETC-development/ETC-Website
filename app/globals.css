@@ -29,3 +29,10 @@ p {
     @apply absolute left-[4.24%] right-[89.31%] top-[73.83%] bottom-[17.09%] bg-[#00F186] blur-[42px]
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
