@@ -4,7 +4,7 @@ import './newsletter.style.css';
 
 export default function NewsletterForground() {
   return (
-    <div className="z-10 sm:max-w-[90%] m-auto bg-black bg-opacity-25 backdrop-blur-sm w-full h-[80vh] rounded-[2rem] border border-silver-white p-5 text-center flex flex-col justify-around overflow-clip">
+    <div className="z-10 sm:max-w-[90%] m-auto bg-black bg-opacity-25 backdrop-blur-sm w-full h-[80vh] rounded-[2rem] border border-silver-white p-5 text-center flex flex-col justify-evenly overflow-clip">
       <div className="flex flex-col justify-around gap-10 px-[5%]">
         <h1>NewsLetter</h1>
         <h2 className="font-bold">LET'S STAY IN TOUCH</h2>
