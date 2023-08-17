@@ -1,5 +1,5 @@
 .btn-ellipse-blur {
-    @apply block absolute w-9 h-7 blur-[28px] m-auto z-0 transition-all;
+    @apply block absolute w-9 h-7 top-0 bottom-0 blur-[28px] m-auto z-0 transition-all;
 }
 
 
