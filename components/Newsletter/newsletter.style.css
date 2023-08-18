@@ -5,5 +5,18 @@
 
 .elipse {
     /* Ellipse 16 */
-    @apply absolute left-[4.24%] right-[89.31%] top-[73.83%] bottom-[17.09%] bg-[#00F186] blur-[42px]
+    @apply absolute left-[4.24%] right-[89.31%] top-[73.83%] bottom-[17.09%] bg-[#00F18610] blur-[42px]
 }
+
+@keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px #00F18610); /* Initial glow color */
+    }
+    50% {
+      filter: drop-shadow(0 0 5px #00F18610) drop-shadow(0 0 7px #00F186F0); /* Intermediate glow colors */
+    }
+  }
+  
+  .glow-animation {
+    animation: glow 2s infinite;
+  }
