@@ -1,4 +1,7 @@
+
+import 'react-multi-carousel/lib/styles.css';
 import "./globals.css";
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Comfortaa, Montserrat } from "next/font/google";
