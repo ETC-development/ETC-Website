@@ -16,7 +16,7 @@ export default function Button2({ text, isActive }: ButtonInterface) {
             onClick={() => {
                 setActive(!active);
             }}
-            className="relative bg-[#0C0A00] px-8 py-4 font-comfortaa font-bold text-silver-white rounded-full cursor-pointer overflow-hidden group"
+            className=" relative bg-[#0C0A00] px-8 py-2 font-comfortaa font-bold text-silver-white rounded-full cursor-pointer overflow-hidden group"
         >
             <div
                 className={`${
@@ -28,7 +28,7 @@ export default function Button2({ text, isActive }: ButtonInterface) {
                     !active && "hidden"
                 } absolute left-0 right-0 bottom-0 m-auto w-1/2 rounded-full h-[1.5px] bg-gradient-to-r from-cyan to-green`}
             ></div>
-            <p className="relative text-md">{text}</p>
+            <p className="relative text-md ">{text}</p>
         </button>
     );
 }
