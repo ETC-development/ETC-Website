@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${azonix.variable} ${montserrat.variable}`}>{children}</body>
+      <body className={`${azonix.variable} ${montserrat.variable} ${comfortaa.variable}`}>{children}</body>
     </html>
   );
 }
