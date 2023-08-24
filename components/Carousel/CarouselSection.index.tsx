@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import { Carousel, IconButton } from "@material-tailwind/react";
 import Image from "next/image";
@@ -41,17 +41,33 @@ const responsive = {
 const CarouselSection = ({
   sectionTitle,
   sectionData,
-  isTopDisplayedOnRight
+  isTopDisplayedOnRight,
 }: CarouselSectionProps) => {
   const [highlightedCard, setHighlightedCard] = useState(1);
-  const [timer, setTimer] = useState(true)
+  // the timer is meant to display the carousel cards starting from the center.
+  const [timer, setTimer] = useState(true);
+
+  const leftCustomArrowRef = useRef();
+  const rightCustomArrowRef = useRef();
+
+  const moveLeft = () => {
+    if (highlightedCard > 0) {
+      leftCustomArrowRef?.current?.click();
+    }
+  };
+
+  const moveRight = () => {
+    if (highlightedCard < sectionData.length - 1) {
+      rightCustomArrowRef?.current?.click();
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
-      setTimer(false)
-    }, 3000)
-  }, [])
-  
+      setTimer(false);
+    }, 3000);
+  }, []);
+
   return (
     <div className=" w-full bg-center overflow-hidden relative ">
       <div className="w-screen h-[600px] lg:h-[800px] opacity-30 my-auto relative z-50 pointer-events-none	">
@@ -62,19 +78,27 @@ const CarouselSection = ({
           {sectionTitle}
         </h1>
 
-        <div className={`flex w-full flex-col lg:mx-auto mt-[30px] lg:mt-[40px] ${isTopDisplayedOnRight ? "lg:flex-row-reverse" : "lg:flex-row"} lg:justify-between lg:px-[50px]`}>
+        <div
+          className={`flex w-full flex-col lg:mx-auto mt-[30px] lg:mt-[40px] ${
+            isTopDisplayedOnRight ? "lg:flex-row-reverse" : "lg:flex-row"
+          } lg:justify-between lg:px-[50px]`}
+        >
           <Carousel
             navigation={() => null}
+            autoplay={timer ? true : false}
+            autoplayDelay={2000}
             prevArrow={({ handlePrev }) => (
               <IconButton
                 variant="text"
                 color="white"
                 size="lg"
                 onClick={() => {
-                  setHighlightedCard((prev) => prev - 1);
+                  moveLeft();
                   handlePrev();
                 }}
-                className={`${highlightedCard === 0 ? "hidden" : "flex"} !absolute top-2/4 lg:hidden !left-[-10px] hover:bg-transparent active:bg-transparent -translate-y-2/4`}
+                className={`${
+                  highlightedCard === 0 ? "hidden" : "flex"
+                } !absolute top-2/4 lg:hidden !left-[-10px] hover:bg-transparent active:bg-transparent -translate-y-2/4`}
               >
                 <Image
                   src={leftArrow}
@@ -90,10 +114,12 @@ const CarouselSection = ({
                 color="white"
                 size="lg"
                 onClick={() => {
-                  setHighlightedCard((prev) => prev + 1);
+                  moveRight();
                   handleNext();
                 }}
-                className={`${highlightedCard === sectionData.length - 1 ? "hidden" : "flex"} !absolute top-2/4 lg:hidden !right-[-10px] hover:bg-transparent active:bg-transparent -translate-y-2/4`}
+                className={`${
+                  highlightedCard === sectionData.length - 1 ? "hidden" : "flex"
+                } !absolute top-2/4 lg:hidden !right-[-10px] hover:bg-transparent active:bg-transparent -translate-y-2/4`}
               >
                 <Image
                   src={rightArrow}
@@ -134,15 +160,23 @@ const CarouselSection = ({
         <MultiCardCarousel
           arrows={true}
           additionalTransfrom={0}
-          autoPlay={timer ? true: false}
+          autoPlay={timer ? true : false}
           customRightArrow={
             <CustomRightArrow
-              handleClick={() => setHighlightedCard((prev) => prev === sectionData.length - 1 ? prev : prev + 1)}
+              ref={rightCustomArrowRef}
+              handleClick={() =>
+                setHighlightedCard((prev) =>
+                  prev === sectionData.length - 1 ? prev : prev + 1
+                )
+              }
             />
           }
           customLeftArrow={
             <CustomLeftArrow
-              handleClick={() => setHighlightedCard((prev) => prev === 0 ? prev : prev - 1)}
+              ref={leftCustomArrowRef}
+              handleClick={() =>
+                setHighlightedCard((prev) => (prev === 0 ? prev : prev - 1))
+              }
             />
           }
           className="w-full mx-auto mt-[30px] lg:mt-[50px] justify-between"
