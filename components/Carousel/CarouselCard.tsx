@@ -29,7 +29,7 @@ const CarouselCard = ({
       </div>
       <div className="absolute inset-0 py-[30px] lg:py-[50px] h-full w-full">
         <div className=" mx-auto items-center px-[0px]   flex flex-col ">
-          <div className="w-[130px] h-[84px] lg:w-[200px] lg:h-[100px] relative">
+          <div className="w-[130px] h-[84px] lg:w-[300px] lg:h-[100px] relative">
             {cardImage ? (
               <Image
                 alt="logo"
