@@ -7,11 +7,12 @@ const CarouselCardMinimized = ({
   cardImage,
   cardTitle,
   isHighlighted,
-}: MinmizedCarouselCardProps) => {
+  handleClick
+}: MinmizedCarouselCardProps) => {  
   
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-[110px] flex lg:w-[300px] 2xl:w-[450px] lg:h-[150px] 2xl:h-[200px] justify-center items-center h-[62px] bg-[#E8E8E84D] rounded-[20px] border__gradient">
+    <div onClick={handleClick} className=" cursor-pointer transition-all ease-in duration-500 flex flex-col items-center">
+      <div className="w-[110px] md:w-[200px] flex lg:w-[300px] 2xl:w-[450px] md:h-[100px] lg:h-[150px] 2xl:h-[200px] justify-center items-center h-[62px] bg-[#E8E8E84D] rounded-[20px] border__gradient">
         {cardImage ? (
           <div className="w-[45px] h-[30px] lg:w-[130px] lg:h-[100px] relative">
             <Image
@@ -30,7 +31,7 @@ const CarouselCardMinimized = ({
         {cardTitle}
       </h1>
 
-      <div className={`w-[100px] lg:w-[300px] 2xl:w-[450px] hidden lg:flex h-[5px] bg-white mt-[15px] rounded-[200px] ${!isHighlighted ? "bg-[#FFFFFF4D]" :"bg-[#ffffff99]"}`} />
+      <div className={`w-[100px] lg:w-[300px] 2xl:w-[450px] hidden lg:flex h-[5px] bg-white mt-[15px] rounded-[200px] ${isHighlighted ? " bg-white" :"bg-[#ffffff24]"}`} />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { CarouselCardProps, CarouselSectionProps } from "@/types"
 import ensiaHubLogo from "@/public/ensia-hub.svg";
 import neuronsEffect from "@/public/neurons-effect.png";
 import ETCodeLogo from "@/public/ETCode.svg";
+import BitCamp from "@/public/BitCamp.png";
 
 export const ProjectCardsData:CarouselCardProps[] = [
     {
@@ -59,7 +60,7 @@ export const EventCardsData:CarouselCardProps[] = [
     },
     {
         CardHoverBackground: neuronsEffect ,
-        cardImage:  ETCodeLogo ,
+        cardImage:  BitCamp  ,
         cardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         cardTitle: "BIT CAMP" ,
         cardCaption: "Coming Soon" ,

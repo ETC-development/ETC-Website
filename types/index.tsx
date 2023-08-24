@@ -13,6 +13,7 @@ export interface MinmizedCarouselCardProps {
     cardImage: any | undefined;  
     cardTitle: string;
     isHighlighted?: boolean;
+    handleClick: () => void;
 }
 
 export interface CarouselArrowProps extends ArrowProps {

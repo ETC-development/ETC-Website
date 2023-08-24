@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Carousel, IconButton } from "@material-tailwind/react";
 import Image from "next/image";
@@ -44,6 +44,14 @@ const CarouselSection = ({
   isTopDisplayedOnRight
 }: CarouselSectionProps) => {
   const [highlightedCard, setHighlightedCard] = useState(1);
+  const [timer, setTimer] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimer(false)
+    }, 3000)
+  }, [])
+  
   return (
     <div className=" w-full bg-center overflow-hidden relative ">
       <div className="w-screen h-[600px] lg:h-[800px] opacity-30 my-auto relative z-50 pointer-events-none	">
@@ -124,14 +132,17 @@ const CarouselSection = ({
         </div>
 
         <MultiCardCarousel
+          arrows={true}
+          additionalTransfrom={0}
+          autoPlay={timer ? true: false}
           customRightArrow={
             <CustomRightArrow
-              handleClick={() => setHighlightedCard((prev) => prev + 1)}
+              handleClick={() => setHighlightedCard((prev) => prev === sectionData.length - 1 ? prev : prev + 1)}
             />
           }
           customLeftArrow={
             <CustomLeftArrow
-              handleClick={() => setHighlightedCard((prev) => prev - 1)}
+              handleClick={() => setHighlightedCard((prev) => prev === 0 ? prev : prev - 1)}
             />
           }
           className="w-full mx-auto mt-[30px] lg:mt-[50px] justify-between"
@@ -139,13 +150,16 @@ const CarouselSection = ({
           itemClass="image-item"
           partialVisbile={false}
         >
+          <div className="hidden" />
           {sectionData.map((data, index) => (
             <CarouselCardMinimized
               key={data.cardTitle}
               isHighlighted={highlightedCard === index}
               {...data}
+              handleClick={() => setHighlightedCard(index)}
             />
           ))}
+          <div />
         </MultiCardCarousel>
       </div>
     </div>
