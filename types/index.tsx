@@ -18,6 +18,7 @@ export interface MinmizedCarouselCardProps {
 
 export interface CarouselArrowProps extends ArrowProps {
     handleClick: () => void;
+    ref: any;
 }
 
 export interface CarouselSectionProps {
