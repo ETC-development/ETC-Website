@@ -1,0 +1,25 @@
+.bg-teamCard{
+    background: linear-gradient(136deg, rgba(7, 79, 87, 0.50) 0%, rgba(7, 79, 87, 0.50) 100%);
+    backdrop-filter: blur(15px);
+}
+
+.manager_title{
+    background: linear-gradient(183deg, #00F186 0%, #00B1E5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+}
+
+.fade{
+ animation: move 2s ease-in;
+}
+
+@keyframes move{
+    from {
+       transform: translate(100px);
+    }
+    to {
+        transform: translate(0px);
+    }
+}
