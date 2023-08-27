@@ -2,19 +2,25 @@
 
 import React, { useEffect, useState, useRef } from "react";
 
-import { Carousel, IconButton } from "@material-tailwind/react";
+// import { Carousel, IconButton } from "@material-tailwind/react";
+import SwiperCore from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  EffectFade,
+} from "swiper/modules";
+
 import Image from "next/image";
 
 import CarouselCard from "./CarouselCard";
 import CarouselCardMinimized from "./CarouselCardMinimized";
 
-import CustomLeftArrow from "../utils/CustomLeftArrow";
-import CustomRightArrow from "../utils/CustomRightArrow";
-
 import leftArrow from "../../public/left arrow.svg";
 import rightArrow from "../../public/Right arrow.svg";
-
-import MultiCardCarousel from "react-multi-carousel";
 
 import BgWave from "../../public/BgWave";
 
@@ -38,6 +44,8 @@ const responsive = {
   },
 };
 
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
+
 const CarouselSection = ({
   sectionTitle,
   sectionData,
@@ -45,7 +53,6 @@ const CarouselSection = ({
 }: CarouselSectionProps) => {
   const [highlightedCard, setHighlightedCard] = useState(1);
   // the timer is meant to display the carousel cards starting from the center.
-  const [timer, setTimer] = useState(true);
 
   const leftCustomArrowRef = useRef();
   const rightCustomArrowRef = useRef();
@@ -62,11 +69,11 @@ const CarouselSection = ({
     }
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTimer(false);
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setTimer(false);
+  //   }, 3000);
+  // }, []);
 
   return (
     <div className=" w-full bg-center overflow-hidden relative ">
@@ -83,70 +90,39 @@ const CarouselSection = ({
             isTopDisplayedOnRight ? "lg:flex-row-reverse" : "lg:flex-row"
           } lg:justify-between lg:px-[50px]`}
         >
-          <Carousel
-            navigation={() => null}
-            autoplay={timer ? true : false}
-            autoplayDelay={2000}
-            prevArrow={({ handlePrev }) => (
-              <IconButton
-                variant="text"
-                color="white"
-                size="lg"
-                onClick={() => {
-                  moveLeft();
-                  handlePrev();
-                }}
-                className={`${
-                  highlightedCard === 0 ? "hidden" : "flex"
-                } !absolute top-2/4 lg:hidden !left-[-10px] hover:bg-transparent active:bg-transparent -translate-y-2/4`}
-              >
-                <Image
-                  src={leftArrow}
-                  alt="left arrow"
-                  width={30}
-                  height={40}
-                />
-              </IconButton>
-            )}
-            nextArrow={({ handleNext }) => (
-              <IconButton
-                variant="text"
-                color="white"
-                size="lg"
-                onClick={() => {
-                  moveRight();
-                  handleNext();
-                }}
-                className={`${
-                  highlightedCard === sectionData.length - 1 ? "hidden" : "flex"
-                } !absolute top-2/4 lg:hidden !right-[-10px] hover:bg-transparent active:bg-transparent -translate-y-2/4`}
-              >
-                <Image
-                  src={rightArrow}
-                  alt="right arrow"
-                  width={30}
-                  height={40}
-                />
-              </IconButton>
-            )}
-            transition={{ duration: 0.5 }}
-            className="rounded-xl lg:hidden  mx-auto w-full max-w-[400px] lg:max-w-[500px]"
-          >
-            {sectionData.map((data, index) => (
-              <CarouselCard
-                key={data.cardTitle}
-                isHighlighted={highlightedCard === index}
-                {...data}
-              />
-            ))}
-          </Carousel>
+          <div className="relative w-full max-w-[400px] lg:max-w-[500px] mx-auto">
+            <Swiper
+              navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
+              modules={[Navigation]}
+              className="mySwiper rounded-xl mx-auto "
+              slidesPerView={1}
+              autoHeight={true}
+              pagination={{ clickable: true, dynamicBullets: true }}
+            >
+              {sectionData.map((data, index) => (
+                <SwiperSlide key={data.cardTitle}>
+                  <CarouselCard
+                    key={data.cardTitle}
+                    isHighlighted={highlightedCard === index}
+                    {...data}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-          <div className="hidden lg:flex rounded-xl  mx-auto w-full max-w-[400px] lg:max-w-[500px]">
-            <CarouselCard
-              key={sectionData[highlightedCard].cardTitle}
-              {...sectionData[highlightedCard]}
-            />
+            <button className="arrow-right cursor-pointer top-2/4 lg:hidden !left-[-10px] absolute  mt-[-5px] -translate-y-2/4">
+              <Image src={leftArrow} alt="left arrow" width={30} height={40} />
+            </button>
+            <button className="arrow-left cursor-pointer top-2/4 lg:hidden !right-[-10px] -translate-y-2/4 absolute  mt-[-5px]">
+              <Image
+                src={rightArrow}
+                alt="right arrow"
+                width={30}
+                height={40}
+              />
+            </button>
           </div>
+
           <div className="flex flex-col items-center justify-center mt-[25px] lg:basis-[50%]">
             <h1 className="font-[400] font-azonix text-transparent lg:text-[40px] text-[24px] bg-clip-text bg-gradient-to-r from-[#00F186] to-[#12D3F1C4]">
               {sectionData[highlightedCard].cardTitle}
@@ -156,45 +132,41 @@ const CarouselSection = ({
             </p>
           </div>
         </div>
+        
+        <div className="relative w-full  mt-[30px] lg:mt-[50px]  mx-auto">
 
-        <MultiCardCarousel
-          arrows={true}
-          additionalTransfrom={0}
-          autoPlay={timer ? true : false}
-          customRightArrow={
-            <CustomRightArrow
-              ref={rightCustomArrowRef}
-              handleClick={() =>
-                setHighlightedCard((prev) =>
-                  prev === sectionData.length - 1 ? prev : prev + 1
-                )
-              }
-            />
-          }
-          customLeftArrow={
-            <CustomLeftArrow
-              ref={leftCustomArrowRef}
-              handleClick={() =>
-                setHighlightedCard((prev) => (prev === 0 ? prev : prev - 1))
-              }
-            />
-          }
-          className="w-full mx-auto mt-[30px] lg:mt-[50px] justify-between"
-          responsive={responsive}
-          itemClass="image-item"
-          partialVisbile={false}
+        <Swiper
+          className="mySwiper w-full"
+          spaceBetween={30}
+          slidesPerView={3}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
         >
           <div className="hidden" />
           {sectionData.map((data, index) => (
-            <CarouselCardMinimized
-              key={data.cardTitle}
-              isHighlighted={highlightedCard === index}
-              {...data}
-              handleClick={() => setHighlightedCard(index)}
-            />
+            <SwiperSlide key={data.cardTitle}>
+              <CarouselCardMinimized
+                key={data.cardTitle}
+                isHighlighted={highlightedCard === index}
+                {...data}
+                handleClick={() => setHighlightedCard(index)}
+              />
+            </SwiperSlide>
           ))}
           <div />
-        </MultiCardCarousel>
+        </Swiper>
+
+        <button className="arrow-right cursor-pointer top-2/4 hidden lg:flex !left-[-10px] absolute  mt-[-5px] -translate-y-2/4">
+          <Image src={leftArrow} alt="left arrow" width={30} height={40} />
+        </button>
+        <button className="arrow-left cursor-pointer top-2/4 hidden lg:flex !right-[-10px] -translate-y-2/4 absolute  mt-[-5px]">
+          <Image src={rightArrow} alt="right arrow" width={30} height={40} />
+        </button>
+
+        </div>
+        
       </div>
     </div>
   );
