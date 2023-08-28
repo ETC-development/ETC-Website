@@ -13,7 +13,7 @@ export default function NewsletterForground() {
 
     const divStyles =
         `z-10 sm:max-w-[90%] m-auto bg-black bg-opacity-25 backdrop-blur-sm
-     w-full h-[80vh] rounded-[2rem] border border-silver-white p-5 
+     w-full h-[80vh] min-h-[40rem] rounded-[2rem] border border-silver-white p-5 
      text-center flex justify-center overflow-clip bg-cover relative`;
 
 
