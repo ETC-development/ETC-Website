@@ -10,7 +10,7 @@ export const ProjectCardsData:CarouselCardProps[] = [
         CardHoverBackground: neuronsEffect ,
         cardImage:  undefined ,
         cardDescription: "Coming Soon",
-        cardTitle: "Project X" ,
+        cardTitle: "Project X 1" ,
         cardCaption: "Coming Soon" ,
     },
     {
@@ -24,21 +24,21 @@ export const ProjectCardsData:CarouselCardProps[] = [
         CardHoverBackground: neuronsEffect ,
         cardImage:  undefined ,
         cardDescription: "Coming Soon",
-        cardTitle: "Project X" ,
+        cardTitle: "Project X 2" ,
         cardCaption: "Coming Soon" ,
     },
     {
         CardHoverBackground: neuronsEffect ,
         cardImage:  undefined ,
         cardDescription: "Coming Soon",
-        cardTitle: "Project X" ,
+        cardTitle: "Project X 3" ,
         cardCaption: "Coming Soon" ,
     },
     {
         CardHoverBackground: neuronsEffect ,
         cardImage:  undefined ,
         cardDescription: "Coming Soon",
-        cardTitle: "Project X" ,
+        cardTitle: "Project X 4" ,
         cardCaption: "Coming Soon" ,
     }
 ] 
@@ -48,7 +48,7 @@ export const EventCardsData:CarouselCardProps[] = [
         CardHoverBackground: neuronsEffect ,
         cardImage:  undefined ,
         cardDescription: "Coming Soon",
-        cardTitle: "Project X" ,
+        cardTitle: "Project X 1" ,
         cardCaption: "Coming Soon" ,
     },
     {
@@ -69,14 +69,14 @@ export const EventCardsData:CarouselCardProps[] = [
         CardHoverBackground: neuronsEffect ,
         cardImage:  undefined ,
         cardDescription: "Coming Soon",
-        cardTitle: "Project X" ,
+        cardTitle: "Project X 2" ,
         cardCaption: "Coming Soon" ,
     },
     {
         CardHoverBackground: neuronsEffect ,
         cardImage:  undefined ,
         cardDescription: "Coming Soon",
-        cardTitle: "Project X" ,
+        cardTitle: "Project X 3" ,
         cardCaption: "Coming Soon" ,
     },
 ]  
