@@ -1,16 +1,26 @@
 "use client";
 import React, { useState } from "react";
-import Button from "../utils/Button1";
 import "./newsletter.style.css";
 import TextInput from "../utils/TextInput";
 import Neurons from "../../public/assets/newsletter/neurons.svg";
-export default function NewsletterForground() {
-    const [email, setEmail] = useState<string>("");
+import NewsLetterButton from "./Newsletter.button";
+import handleSubmit from "./Newsletter.handler";
 
-    const divStyles = `z-10 sm:max-w-[90%] m-auto bg-black bg-opacity-25 backdrop-blur-sm w-full h-[80vh] rounded-[2rem] border border-silver-white p-5 text-center flex justify-center overflow-clip bg-cover relative`;
+
+export default function NewsletterForground() {
+    const [email, setEmail] = useState<string>("test@test.com");
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+
+    const divStyles =
+        `z-10 sm:max-w-[90%] m-auto bg-black bg-opacity-25 backdrop-blur-sm
+     w-full h-[80vh] rounded-[2rem] border border-silver-white p-5 
+     text-center flex justify-center overflow-clip bg-cover relative`;
+
+
     return (
         <div className={divStyles}>
-            <img src={Neurons.src} className="object-contain flex-1 absolute z-10  scale-[150%] lg:scale-[150%] bottom-0 glow-animation" />
+            <img src={Neurons.src} className="object-contain flex-1 absolute z-10  
+            scale-[150%] lg:scale-[150%] bottom-0 glow-animation" draggable={false}/>
             <div className="m-auto flex flex-col  justify-evenly w-full h-full">
                 <div className="z-20 flex flex-col justify-around gap-10 px-[5%]">
                     <h1>NewsLetter</h1>
@@ -24,7 +34,7 @@ export default function NewsletterForground() {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
-                <form className="flex flex-col justify-around gap-5">
+                <form className="z-50 flex flex-col justify-around gap-5">
                     <TextInput
                         placeholder={"Enter your email"}
                         type={"email"}
@@ -32,9 +42,7 @@ export default function NewsletterForground() {
                         id={"newsletter_email"}
                         setInputValue={setEmail}
                     />
-                    <div className="w-[50%] max-w-[300px] mx-auto">
-                        <Button text="Subscribe now" />
-                    </div>
+                    <NewsLetterButton isLoading={isLoading} onSubmit={handleSubmit({email: email, setIsLoading: setIsLoading})} />
                 </form>
             </div>
         </div>
