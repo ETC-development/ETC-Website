@@ -7,11 +7,11 @@ import Frame3 from "../../public/assets/newsletter/Frame(3).svg";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function NewsletterBackground() {
-  const {scrollY} = useScroll();
-  const translateY = useTransform(scrollY, [0, 100], [0, 50], { clamp: false });
+    const { scrollY } = useScroll();
+    const translateY = useTransform(scrollY, [0, 100], [0, 50], { clamp: false });
     return (
         <div className="h-full w-full absolute bottom-0 right-0" draggable={false}>
-            <motion.div style={{position: "relative", height: '85vh', translateY}}>
+            <motion.div style={{ position: "relative", height: '100vh', translateY }}>
                 <div className="elipse" draggable={false}></div>
 
                 <img

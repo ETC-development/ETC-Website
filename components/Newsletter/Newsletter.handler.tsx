@@ -12,20 +12,7 @@ const handleSubmit = ({ email, setIsLoading }: INewsLetterHandler) => async (eve
 
     setIsLoading(true);
 
-    const options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            email: email,
-            list_uuids: NewsLetterConfig.LIST_UUIDS,
-        })
-    }
-
-try {
-    console.log(await fetch(NewsLetterConfig.API_URL, options));
-} catch(e) {}
+   await fetch(`localhost:3000/api/newsletter/subscibe?email=${email}`)
 
     setIsLoading(false);
 }
