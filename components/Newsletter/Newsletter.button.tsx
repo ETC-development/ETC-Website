@@ -9,7 +9,7 @@ interface INewsLetterButton {
 
 export default function NewsLetterButton({ isLoading, onSubmit }: INewsLetterButton) {
 
-    const spinner = <div className="flex flex-row gap-5"> <div>{Spinner()}</div> <p> Subscribing...</p></div>
+    const spinner = <div className="flex flex-row gap-5"> <div>{Spinner()}</div> Subscribing..</div>
 
     return <div className="w-[50%] max-w-[300px] mx-auto">
         <Button text={isLoading ? spinner : "Subscribe"} onSubmit={onSubmit}/>
