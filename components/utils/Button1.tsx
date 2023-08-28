@@ -14,7 +14,7 @@ export default function Button1({ text, onSubmit }: ButtonProps) {
             <div className="btn-ellipse-blur hover-glow left-0 bg-cyan "></div>
             <div className="btn-ellipse-blur hover-glow left-0 !w-16 right-0 bg-green"></div>
             <div className="btn-ellipse-blur hover-glow right-0 bg-less-dark-green "></div>
-            <p className="z-10 text-silver-white relative">{text}</p>
+            <div className="z-10 text-silver-white relative">{text}</div>
         </button>
     );
 }
