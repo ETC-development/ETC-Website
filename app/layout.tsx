@@ -1,5 +1,4 @@
 
-import 'react-multi-carousel/lib/styles.css';
 import "./globals.css";
 
 import 'swiper/css';
