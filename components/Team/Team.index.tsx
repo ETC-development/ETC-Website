@@ -63,7 +63,7 @@ export default function Team() {
                 year: '2nd year student at ENSIA',
                 desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.',
                 email:'Salah Eddine Makdour',
-                img: "/lyes.jpeg"
+                img: "/ilyes.png"
         },
         {
                 name: 'Hamza dia',
