@@ -218,7 +218,7 @@
 
 "@next/swc-win32-x64-msvc@13.4.16":
   version "13.4.16"
-  resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.16.tgz#79a151d94583e03992c80df3d3e7f7686390ddac"
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.16.tgz"
   integrity sha512-WamDZm1M/OEM4QLce3lOmD1XdLEl37zYZwlmOLhmF7qYJ2G6oYm9+ejZVv+LakQIsIuXhSpVlOvrxIAHqwRkPQ==
 
 "@nodelib/fs.scandir@2.1.5":
@@ -1234,9 +1234,15 @@ fs.realpath@^1.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 fsevents@~2.3.2:
+<<<<<<< HEAD
   version "2.3.2"
   resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
+=======
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
+  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
+>>>>>>> master
 
 =======
 >>>>>>> b118afc (made the initial layout/still some bugs)
@@ -2110,6 +2116,7 @@ react-is@^16.13.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 react@^18.0.0, react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@18.2.0:
 =======
 react-multi-carousel@^2.8.4:
@@ -2122,6 +2129,8 @@ react-multi-carousel@^2.8.4:
 =======
 =======
 >>>>>>> 2384f72 (fix few props issues)
+=======
+>>>>>>> master
 react-multi-carousel@^2.8.4:
   version "2.8.4"
   resolved "https://registry.yarnpkg.com/react-multi-carousel/-/react-multi-carousel-2.8.4.tgz#eee6493878974e372e5aa9944754602ec0f34968"
@@ -2133,7 +2142,10 @@ react-simple-typewriter@^5.0.1:
   integrity sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 6b0e818 (general styling fixes)
+=======
+>>>>>>> master
 react@18.2.0:
 >>>>>>> b118afc (made the initial layout/still some bugs)
 =======
@@ -2386,12 +2398,16 @@ supports-preserve-symlinks-flag@^1.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 88fb2a9 (added swiper with no functionalities)
+=======
+>>>>>>> master
 swiper@^10.2.0:
   version "10.2.0"
   resolved "https://registry.npmjs.org/swiper/-/swiper-10.2.0.tgz"
   integrity sha512-nktQsOtBInJjr3f5DicxC8eHYGcLXDVIGPSon0QoXRaO6NjKnATCbQ8SZsD3dN1Ph1RH4EhVPwSYCcuDRFWHGQ==
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2411,6 +2427,9 @@ tailwind-merge@1.8.1:
 
 =======
 >>>>>>> ad8e481 (made the carousels using swiperjs)
+=======
+
+>>>>>>> master
 tailwindcss@3.3.3:
   version "3.3.3"
   resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.3.3.tgz"
