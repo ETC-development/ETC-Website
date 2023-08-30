@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* #FFFFFF, #FFFFFF03, #FFFFFF03, #FFFFFFF7 */
 /* .border__gradient {
   border-image-source: linear-gradient(
@@ -29,5 +30,22 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+
+body {
+    @apply bg-bg-color text-white p-2
+}
+
+h1 {
+    @apply font-azonix font-bold text-4xl md:text-6xl lg:text-8xl
+}
+
+h2 {
+    @apply font-montserrat text-xl md:text-2xl lg:text-4xl
+}
+
+p {
+    @apply font-montserrat text-sm md:text-lg lg:text-xl 
 }
 

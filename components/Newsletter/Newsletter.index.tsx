@@ -1,3 +1,11 @@
+import NewsletterBackground from "./Newsletter.background";
+import NewsletterForground from "./Newsletter.forground";
+
 export default function Newsletter() {
-    return <div>newsletter</div>
+  return (
+    <div className="h-[100vh]  min-h-[65rem]  w-full overflow-hidden relative flex flex-col justify-center">
+      <NewsletterBackground />
+      <NewsletterForground />
+    </div>
+  );
 }
