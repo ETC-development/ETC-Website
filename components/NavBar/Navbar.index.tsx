@@ -86,7 +86,7 @@ export default function Navbar() {
         <Button2 text={'Projects'} isActive={false} />
         <Button2 text={'Contacts'} isActive={false} />
         <div className='hidden lg:flex '>
-        <Button1 text={'Register Now'} />
+        <Button1 onSubmit={()=>{}} text={'Register Now'} />
         </div>
         
       </div>

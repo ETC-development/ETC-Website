@@ -42,7 +42,7 @@ export default function TeamCard({
         
         <div 
         className={`
-        flex flex-col items-center gap-[20px] w-[300px] h-[400px] shrink-0 rounded-[25px] border borderr-[#C3C3C3] bg-bg-color 
+        flex flex-col items-center gap-[20px] w-[300px] h-fit shrink-0 rounded-[25px] border borderr-[#C3C3C3] bg-bg-color 
         `}
         onClick={() => ( isPhoneview() ? setFlip(!flip) : '' )}
         >

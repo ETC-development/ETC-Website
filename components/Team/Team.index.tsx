@@ -1,6 +1,6 @@
 "use client";
 
-import { react , useState} from "react"
+import { useState} from "react"
 import { Swiper , SwiperSlide } from "swiper/react"
 
 
@@ -21,13 +21,7 @@ export default function Team() {
        slide?.classList.add("fade");
     }
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-    const getModifier = () => {
-        if (window.innerWidth < 1024) {
-            return 50;
-        } else {
-            return 7;
-        }
-    };
+
     const managers = [
         {
                 name: 'Salah Eddine Makdour',
@@ -85,7 +79,7 @@ export default function Team() {
         <div className=" relative w-[90%] flex items-center justify-center  gap-12 py-4 ">
             <Swiper
               
-            onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
 
             effect={'coverflow'}
             grabCursor={true}
@@ -96,7 +90,7 @@ export default function Team() {
                 rotate: 0,
                 stretch: 0,
                 depth: 100,
-                modifier: getModifier() ,
+                modifier: 7,
             }}
 
             pagination={{ clickable: true }}
