@@ -15,8 +15,6 @@ import CarouselCardMinimized from "./CarouselCardMinimized";
 import leftArrow from "../../public/left arrow.svg";
 import rightArrow from "../../public/Right arrow.svg";
 
-import BgWave from "../../public/BgWave";
-
 import { CarouselSectionProps } from "@/types";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
@@ -27,15 +25,15 @@ const CarouselSection = ({
     isTopDisplayedOnRight,
 }: CarouselSectionProps) => {
     const [highlightedCard, setHighlightedCard] = useState(1);
-    const [firstSwiper, setFirstSwiper] = useState(null);
-    const [secondSwiper, setSecondSwiper] = useState(null);  
+    const [firstSwiper, setFirstSwiper] = useState<SwiperCore>();
+    const [secondSwiper, setSecondSwiper] = useState<SwiperCore>();  
 
     return (
         <div className=" w-full bg-center overflow-hidden relative ">
             <div className="w-screen h-[600px] lg:h-[800px] opacity-30 my-auto relative z-50 pointer-events-none	">
                 {/* <BgWave /> */}
             </div>
-            <div className="w-full absolute left-0 top-0 flex flex-col py-[30px] lg:py-[50px] px-[10px] 2xl:px-[50px] bg-bg-color">
+            <div className="w-full absolute left-0 top-0 flex flex-col py-[30px] lg:py-[50px] px-[10px] 2xl:px-[50px] bg-transparent">
                 <h1 className="font-azonix text-[32px] lg:text-[40px] text-white font-[400] text-center">
                     {sectionTitle}
                 </h1>
@@ -113,7 +111,10 @@ const CarouselSection = ({
                                     key={data.cardTitle}
                                     isHighlighted={highlightedCard === index}
                                     {...data}
-                                    handleClick={() => setHighlightedCard(index)}
+                                    handleClick={() => {
+                                        setHighlightedCard(index);
+                                        setSecondSwiper((e) => {e?.slideTo(index); return e});
+                                    }}
                                 />
                             </SwiperSlide>
                         ))}
