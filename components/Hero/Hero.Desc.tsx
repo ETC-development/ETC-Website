@@ -27,7 +27,7 @@ export default function HeroDesc(){
                 </div>
         </div>
         <div className="registerBtn w-fit m-3">
-                <Button1 text="Register Now" ></Button1>
+                <Button1 onSubmit={()=>{}} text="Register Now" ></Button1>
          </div>
         </div>
 }
