@@ -6,10 +6,10 @@ export default function HeroDesc(){
         return  <div className="hero-desc w-fit flex flex-col items-center md:items-start lg:text-start gap-2 lg:gap-3 mt-3">
         <div className="slogan w-fit lg:w-[412px] flex flex-col items-center md:items-start relative">
               <div className=" font-azonix text-white text-[30px] md:text-[40px] xl:text-[50px] ">empowered          </div> 
-              <div className="by-innovation flex">
-              <div className=" font-azonix text-white text-[30px] md:text-[40px] xl:text-[50px] mr-2">by</div> 
-              <div className="innovation-animation font-azonix text-white text-[30px] md:text-[40px] xl:text-[50px] flex">
-                 <div className="innovation-flou text-white text-opacity-25">Innovation </div>
+              <div className="by-innovation font-azonix flex">
+              <div className="  text-white text-[30px] md:text-[40px] xl:text-[50px] mr-2">by</div> 
+              <div className="innovation-animation text-white text-[30px] md:text-[40px] xl:text-[50px] flex">
+                 <div className="innovation-flou text-white blur-[2px] text-opacity-25">Innovation </div>
                 <div className="innovation absolute stroke-zinc-50 ">
         <Typewriter
             words={[" innovation"]}
