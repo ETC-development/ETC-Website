@@ -9,15 +9,15 @@ import Team from '@/components/Team/Team.index'
 export default function Home() {
   return (
     <>
-      <Navbar/>
-      <Hero />
+      {/* <Navbar/>
+      <Hero /> */}
       <Projects />
       <Events/>
-      <Team />
+      {/* <Team />
       <Newsletter />
       <Footer />
       <div className='font-montserrat'>This is a sample text</div>
-      <div className='font-azonix'>This is a sample text</div>
+      <div className='font-azonix'>This is a sample text</div> */}
     </>
   )
 }
