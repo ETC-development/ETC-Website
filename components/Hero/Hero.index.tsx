@@ -14,14 +14,14 @@ import HeroDesc from "./Hero.Desc";
 export default function Hero() {
 
 
-    return <div className="hero  h-fit w-full flex justify-center relative">
+    return <div className="hero overflow-x-hidden overflow-y-visible h-fit w-full flex justify-center">
 
-        <motion.div className="hero-gradient  absolute"
+        <motion.div className="hero-gradient overflow-x-hidden overflow-y-visible absolute blur-xl"
          initial={{ rotate: 0 }} 
          animate={{ rotate: 360 }}
          transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
         >
-                 <Image src={heroGradient}  alt="gradienr"></Image>
+                 <Image src={heroGradient} alt="gradient"></Image>
         </motion.div>
 
         <div className="hero-container p-[1px] w-full max-h-full lg:max-w-[95%] xl:max-w-[95%]">

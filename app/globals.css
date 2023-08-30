@@ -32,19 +32,19 @@
 }
 
 body {
-    @apply bg-bg-color text-white p-2
+    @apply bg-bg-color text-white p-2 overflow-x-hidden;
 }
 
 h1 {
-    @apply font-azonix font-bold text-4xl md:text-6xl lg:text-8xl
+    @apply font-azonix font-bold text-4xl md:text-6xl lg:text-8xl;
 }
 
 h2 {
-    @apply font-montserrat text-xl md:text-2xl lg:text-4xl
+    @apply font-montserrat text-xl md:text-2xl lg:text-4xl;
 }
 
 p {
-    @apply font-montserrat text-sm md:text-lg lg:text-xl 
+    @apply font-montserrat text-sm md:text-lg lg:text-xl ;
 }
 
 
