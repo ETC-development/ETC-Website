@@ -1,4 +1,9 @@
+
 import "./globals.css";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Comfortaa, Montserrat } from "next/font/google";

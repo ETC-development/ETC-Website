@@ -1,3 +1,14 @@
+"use client";
+
+import CarouselSection from "../Carousel/CarouselSection.index";
+import { EventCardsData } from "@/constants";
+
 export default function Events() {
-    return <div>events</div>
+  return (
+      <CarouselSection
+        isTopDisplayedOnRight={false}
+        sectionTitle="Our Events"
+        sectionData={EventCardsData}
+      />
+  );
 }
