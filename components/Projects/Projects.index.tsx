@@ -7,7 +7,7 @@ export default function Projects() {
   return (
       <CarouselSection
         isTopDisplayedOnRight={true}
-        sectionTitle="Our Projects"
+        sectionTitle="Projects"
         sectionData={ProjectCardsData}
       />
   );

@@ -12,7 +12,7 @@ const CarouselCardMinimized = ({
   
   return (
     <div onClick={handleClick} className=" cursor-pointer transition-all ease-in duration-500 flex flex-col items-center">
-      <div className="w-[110px] md:w-[210px] flex lg:w-[300px] 2xl:w-[450px] md:h-[100px] lg:h-[150px] 2xl:h-[200px] justify-center items-center h-[62px] bg-[#E8E8E84D] rounded-[20px] border__gradient">
+      <div className="w-full md:w-[210px] flex lg:w-[300px] 2xl:w-[450px] md:h-[100px] lg:h-[150px] 2xl:h-[200px] justify-center items-center h-24 bg-[#E8E8E84D] rounded-[20px] border__gradient">
         {cardImage ? (
           <div className="w-[45px] h-[30px] lg:w-[130px] lg:h-[100px] relative">
             <Image
@@ -27,11 +27,11 @@ const CarouselCardMinimized = ({
         )}
       </div>
 
-      <h1 className="text-white text-center font-azonix text-[12px] lg:text-[15px] 2xl:text-[18px] font-[400] mt-[10px] max-w-[67px] lg:max-w-full ">
+      <h1 className="text-white text-center font-azonix text-[12px] lg:text-[15px] 2xl:text-[18px] font-[400] mt-[10px] max-w-[67px] leading-5 lg:max-w-full ">
         {cardTitle}
       </h1>
 
-      <div className={`w-[100px] lg:w-[300px] 2xl:w-[450px] hidden lg:flex h-[5px] bg-white mt-[15px] rounded-[200px] ${isHighlighted ? " bg-white" :"bg-[#ffffff1f]"}`} />
+      <div className={`w-[100px] lg:w-[300px] 2xl:w-[450px] hidden lg:flex h-[5px] mt-[15px] rounded-[200px] ${isHighlighted ? " bg-white" :"bg-[#ffffff1f]"}`} />
     </div>
   );
 }

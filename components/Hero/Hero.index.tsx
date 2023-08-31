@@ -14,15 +14,15 @@ import HeroDesc from "./Hero.Desc";
 export default function Hero() {
 
 
-    return <div className="hero overflow-x-hidden overflow-y-visible h-fit w-full flex justify-center">
+    return <div className="hero z-0 overflow-x-hidden overflow-y-visible h-fit w-full flex justify-center">
 
-        <motion.div className="hero-gradient overflow-x-hidden overflow-y-visible absolute blur-xl"
+        {/* <motion.div className="hero-gradient overflow-x-hidden overflow-y-visible absolute blur-xl"
          initial={{ rotate: 0 }} 
          animate={{ rotate: 360 }}
          transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
         >
                  <Image src={heroGradient} alt="gradient"></Image>
-        </motion.div>
+        </motion.div> */}
 
         <div className="hero-container p-[1px] w-full max-h-full lg:max-w-[95%] xl:max-w-[95%]">
 
@@ -32,7 +32,7 @@ export default function Hero() {
         <Image className="logo w-[50px] md:w-[70px]  lg:w-[95px]" src={logo}  alt=""></Image>
         <div className="etc-logo font-azonix text-[20px] md:text-[25px] lg:text-[35px]">ETC Club</div>
         </div>
-        <div className="hero-elements top-auto flex flex-col gap-2 md:gap-0 items-center  md:ml-4 lg:ml-12  md:flex-row relative">
+        <div className="hero-elements top-auto flex flex-col gap-2 md:gap-0 items-center  md:ml-4 lg:ml-12  md:flex-row lg:justify-between relative">
         <div className="image-tech w-[800px] md:w-[600px] lg:w-[800px] bottom-0 rotate-90 md:rotate-0 sm:right-0 absolute">
         <Image className="tech" src={tech}  alt=""></Image>
         </div>

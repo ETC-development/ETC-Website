@@ -8,23 +8,18 @@ const CarouselCard = ({
   cardDescription,
   CardHoverBackground,
 }: CarouselCardProps) => {
-  const [isBgHovered, setIsBgHovered] = useState(false);
 
   return (
     <div
-      className="relative w-[280px] mx-auto lg:w-[450px] lg:h-[350px] overflow-hidden h-[240px] bg-[#E8E8E84D] rounded-[20px] border__gradient"
-      onMouseEnter={() => setIsBgHovered(true)}
-      onMouseLeave={() => setIsBgHovered(false)}
+      className="relative w-full md:w-[280px] mx-auto lg:w-[450px] lg:h-[350px] overflow-hidden h-[240px] bg-[#E8E8E84D] rounded-[20px] border__gradient"
     >
-      <div className="h-full w-full relative transition-all ease-in duration-[3000ms] top-[-35px]">
+      <div className="h-full w-full relative transition-all ease-in duration-[3000ms] top-[-35px] group">
         <Image
-          alt="ensia hub logo"
+          alt="element"
           src={CardHoverBackground}
-          className={`rotate-180 ${
-            isBgHovered ? "opacity-100" : "opacity-50"
-          } `}
-          layout="fill"
+          className={`rotate-180 opacity-50 group-hover:opacity-100`}
           objectFit="contain"
+          fill
         />
       </div>
       <div className="absolute inset-0 py-[30px] lg:py-[50px] h-full w-full">

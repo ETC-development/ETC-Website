@@ -34,7 +34,7 @@ export default function NewsletterForground() {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
-                <form className="z-50 flex flex-col justify-around gap-5">
+                <form className="z-50 flex flex-col justify-around items-center gap-5">
                     <TextInput
                         placeholder={"Enter your email"}
                         type={"email"}

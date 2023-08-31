@@ -57,15 +57,15 @@ body {
 }
 
 h1 {
-    @apply font-azonix font-bold text-4xl md:text-6xl lg:text-8xl;
+    @apply font-azonix font-bold text-4xl md:text-3xl lg:text-6xl;
 }
 
 h2 {
-    @apply font-montserrat text-xl md:text-2xl lg:text-4xl;
+    @apply font-montserrat text-xl md:text-2xl lg:text-3xl;
 }
 
 p {
-    @apply font-montserrat text-sm md:text-lg lg:text-xl ;
+    @apply font-montserrat text-sm md:text-lg lg:text-lg ;
 }
 
 
