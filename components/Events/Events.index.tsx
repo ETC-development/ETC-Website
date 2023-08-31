@@ -7,7 +7,7 @@ export default function Events() {
   return (
       <CarouselSection
         isTopDisplayedOnRight={false}
-        sectionTitle="Our Events"
+        sectionTitle="Events"
         sectionData={EventCardsData}
       />
   );

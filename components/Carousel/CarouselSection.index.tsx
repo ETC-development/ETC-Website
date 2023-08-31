@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +17,8 @@ import rightArrow from "../../public/Right arrow.svg";
 
 import { CarouselSectionProps } from "@/types";
 
+import "./carousel.css";
+
 SwiperCore.use([Navigation, Scrollbar, A11y, EffectFade]);
 
 const CarouselSection = ({
@@ -26,7 +28,7 @@ const CarouselSection = ({
 }: CarouselSectionProps) => {
     const [highlightedCard, setHighlightedCard] = useState(1);
     const [firstSwiper, setFirstSwiper] = useState<SwiperCore>();
-    const [secondSwiper, setSecondSwiper] = useState<SwiperCore>();  
+    const [secondSwiper, setSecondSwiper] = useState<SwiperCore>();
 
     return (
         <div className=" w-full bg-center overflow-hidden relative ">
@@ -45,9 +47,11 @@ const CarouselSection = ({
                 >
                     <div className="relative w-full max-w-[400px] lg:max-w-[500px] mx-auto">
                         <Swiper
-                            navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
-                            modules={[Pagination, Controller]}
-                            className="mySwiper w-full "
+                            navigation={{
+                                nextEl: `.arrow-left-${sectionTitle}`,
+                                prevEl: `.arrow-right-${sectionTitle}`,
+                            }}
+                            modules={[Controller, Navigation]}
                             slidesPerView={1}
                             onSwiper={setFirstSwiper}
                             controller={{ control: secondSwiper }}
@@ -55,10 +59,9 @@ const CarouselSection = ({
                             initialSlide={1}
                             effect="fade"
                             fadeEffect={{
-                              crossFade: true
+                                crossFade: true,
                             }}
                             autoHeight={true}
-                            slideToClickedSlide={true}
                         >
                             {sectionData.map((data, index) => (
                                 <SwiperSlide key={data.cardTitle}>
@@ -71,10 +74,26 @@ const CarouselSection = ({
                             ))}
                         </Swiper>
 
-                        <button className="arrow-right cursor-pointer top-2/4 lg:hidden !left-[-10px] absolute  mt-[-5px] -translate-y-2/4">
+                        <button
+                            onClick={() => {
+                                setFirstSwiper((swiper) => {
+                                    swiper?.slidePrev();
+                                    return swiper;
+                                });
+                            }}
+                            className={`.arrow-right-${sectionTitle} cursor-pointer top-2/4 lg:hidden !left-[-35px] absolute  mt-[-5px] -translate-y-2/4`}
+                        >
                             <Image src={leftArrow} alt="left arrow" width={30} height={40} />
                         </button>
-                        <button className="arrow-left cursor-pointer top-2/4 lg:hidden !right-[-10px] -translate-y-2/4 absolute  mt-[-5px]">
+                        <button
+                            onClick={()=>{
+                                setFirstSwiper((swiper) => {
+                                    swiper?.slideNext();
+                                    return swiper;
+                                })
+                            }}
+                            className={`.arrow-left-${sectionTitle} cursor-pointer top-2/4 lg:hidden !right-[-35px] -translate-y-2/4 absolute  mt-[-5px]`}
+                        >
                             <Image src={rightArrow} alt="right arrow" width={30} height={40} />
                         </button>
                     </div>
@@ -89,19 +108,27 @@ const CarouselSection = ({
                     </div>
                 </div>
 
-                <div className="relative w-full  mt-[30px] lg:mt-[50px]  mx-auto">
+                <div className="relative w-full flex justify-center items-center mt-[30px] lg:mt-[50px]  mx-auto">
                     <Swiper
-                        onSlideChange={(e) =>{setHighlightedCard(e.realIndex)} }
+                        onSlideChange={(e) => {
+                            setHighlightedCard(e.realIndex);
+                        }}
                         className="mySwiper w-full"
-                        spaceBetween={30}
+                        spaceBetween={15}
                         onSwiper={setSecondSwiper}
                         controller={{ control: firstSwiper }}
-                        navigation={{ nextEl: ".arrow-left-bottom", prevEl: ".arrow-right-bottom" }}
+                        navigation={{
+                            nextEl: `.arrow-left-bottom-${sectionTitle}`,
+                            prevEl: `.arrow-right-bottom-${sectionTitle}`,
+                        }}
                         slidesPerView={3}
                         slideToClickedSlide={true}
-                        modules={[Controller]}
-                    >    
-                        <SwiperSlide> <div></div> </SwiperSlide>
+                        modules={[Controller, Navigation]}
+                    >
+                        <SwiperSlide>
+                            {" "}
+                            <div></div>{" "}
+                        </SwiperSlide>
                         {sectionData.map((data, index) => (
                             <SwiperSlide key={data.cardTitle}>
                                 <CarouselCardMinimized
@@ -110,22 +137,27 @@ const CarouselSection = ({
                                     {...data}
                                     handleClick={() => {
                                         setHighlightedCard(index);
-                                        setSecondSwiper((e) => {e?.slideTo(index); return e});
+                                        setSecondSwiper((e) => {
+                                            e?.slideTo(index);
+                                            return e;
+                                        });
                                     }}
                                 />
                             </SwiperSlide>
                         ))}
-                        <SwiperSlide> <div></div> </SwiperSlide>
-
+                        <SwiperSlide>
+                            {" "}
+                            <div></div>{" "}
+                        </SwiperSlide>
                     </Swiper>
 
                     <button
-                        className="arrow-right-bottom cursor-pointer top-2/4 hidden lg:flex !left-0 absolute  mt-[-5px] -translate-y-2/4"
+                        className={`arrow-right-bottom-${sectionTitle} cursor-pointer top-2/4 hidden lg:flex !left-0 absolute  mt-[-5px] -translate-y-2/4`}
                     >
                         <Image src={leftArrow} alt="left arrow" width={30} height={40} />
                     </button>
                     <button
-                        className="arrow-left-bottom cursor-pointer top-2/4 hidden lg:flex !right-0 -translate-y-2/4 absolute  mt-[-5px]"
+                        className={`arrow-left-bottom-${sectionTitle} cursor-pointer top-2/4 hidden lg:flex !right-0 -translate-y-2/4 absolute  mt-[-5px]`}
                     >
                         <Image src={rightArrow} alt="right arrow" width={30} height={40} />
                     </button>

@@ -1,8 +1,21 @@
-.swiper-slide{
-        border-radius: 25px;
-        background-color: linear-gradient(136deg, rgba(7, 79, 87, 0.50) 0%, rgba(7, 79, 87, 0.50) 100%);
-        backdrop-filter: blur(30px);
+.swiper-slide-team {
+    border-radius: 25px;
+    -webkit-backdrop-filter: blur(30px) !important;
+    backdrop-filter: blur(30px) !important;
+    position: relative;
+    overflow: hidden !important;
 }
+
+
+@-moz-document url-prefix() {
+ 
+    .team-card { 
+        background-color: #003843d6;
+     }
+ 
+}
+
+
 
 .manager_title{
     background: linear-gradient(183deg, #00F186 0%, #00B1E5 100%);
