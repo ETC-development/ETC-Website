@@ -58,13 +58,14 @@ const CarouselSection = ({
                             spaceBetween={30}
                             initialSlide={1}
                             effect="fade"
+                            className="w-[80%] md:w-full"
                             fadeEffect={{
                                 crossFade: true,
                             }}
                             autoHeight={true}
                         >
                             {sectionData.map((data, index) => (
-                                <SwiperSlide key={data.cardTitle}>
+                                <SwiperSlide key={data.cardTitle} className="">
                                     <CarouselCard
                                         key={data.cardTitle}
                                         isHighlighted={highlightedCard === index}
@@ -81,7 +82,7 @@ const CarouselSection = ({
                                     return swiper;
                                 });
                             }}
-                            className={`.arrow-right-${sectionTitle} cursor-pointer top-2/4 lg:hidden !left-[-35px] absolute  mt-[-5px] -translate-y-2/4`}
+                            className={`.arrow-right-${sectionTitle} cursor-pointer top-2/4 lg:hidden absolute  mt-[-5px] -translate-y-2/4`}
                         >
                             <Image src={leftArrow} alt="left arrow" width={30} height={40} />
                         </button>
@@ -92,7 +93,7 @@ const CarouselSection = ({
                                     return swiper;
                                 })
                             }}
-                            className={`.arrow-left-${sectionTitle} cursor-pointer top-2/4 lg:hidden !right-[-35px] -translate-y-2/4 absolute  mt-[-5px]`}
+                            className={`.arrow-left-${sectionTitle} cursor-pointer top-2/4 lg:hidden right-0 -translate-y-2/4 absolute  mt-[-5px]`}
                         >
                             <Image src={rightArrow} alt="right arrow" width={30} height={40} />
                         </button>
