@@ -14,7 +14,7 @@ export default function Home() {
       <Projects />
       <Events/>
       <Team />
-      <Newsletter />
+      {/* <Newsletter /> */}
       {/* <Footer /> */}
       {/* <div className='font-montserrat'>This is a sample text</div> */}
       {/* <div className='font-azonix'>This is a sample text</div> */}
