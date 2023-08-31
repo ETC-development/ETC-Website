@@ -37,8 +37,8 @@ export default function Navbar() {
     return (
         <div
             className={`
-    ${scrollingUp ? "bg-bg-color border-b mt-0" : "bg-transparent border-none lg:mt-2"}
-    top-0 w-screen fixed py-2 z-50 px-5 lg:px-14 border-silver-white lg:flex lg:items-center lg:justify-between 
+    ${scrollingUp ? "bg-bg-color border-b mt-0" : "bg-bg-color md:bg-transparent border-b md:border-none lg:mt-2"}
+    top-0 w-screen fixed md:py-2 z-50 px-5 py-4 lg:px-14 border-silver-white/60 lg:flex lg:items-center lg:justify-between 
     `}
         >
             <div className="btn-ellipse-blur hover-glow left-0 bg-cyan absolute"></div>
@@ -49,7 +49,7 @@ export default function Navbar() {
             <div className="flex justify-between items-center relative">
                 <div
                     className={`
-         ${scrollingUp ? "flex" : "hidden"}
+         ${scrollingUp ? "flex" : "flex md:hidden"}
           gap-[10px] items-center relative group
          `}
                 >
@@ -71,7 +71,7 @@ export default function Navbar() {
         lg:hidden m-2 h-full grid grid-cols-6 w-full
         `}
                 >
-                    <div className={`${scrollingUp ? "relative col-end-8 " : "col-end-8 p-2"}`}>
+                    <div className={"col-end-8 p-2"}>
                         {isHidden ? <MoreNavbar /> : <Cross color="#DADBDD" />}
                     </div>
                 </div>
