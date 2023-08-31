@@ -31,7 +31,7 @@ const CarouselCardMinimized = ({
         {cardTitle}
       </h1>
 
-      <div className={`w-[100px] lg:w-[300px] 2xl:w-[450px] hidden lg:flex h-[5px] bg-white mt-[15px] rounded-[200px] ${isHighlighted ? " bg-white" :"bg-[#ffffff1f]"}`} />
+      <div className={`w-[100px] lg:w-[300px] 2xl:w-[450px] hidden lg:flex h-[5px] mt-[15px] rounded-[200px] ${isHighlighted ? " bg-white" :"bg-[#ffffff1f]"}`} />
     </div>
   );
 }
