@@ -72,9 +72,9 @@ export default function Team() {
     const [thirdSwiper, setThirsSwiper] = useState<SwiperCore>();
 
     return (
-        <div className="bg-bg-color justify-center w-screen py-9 flex flex-col items-center  gap-12 relative">
-            <p className="text-white font-azonix text-[40px] md:text-[70px] font-normal ">
-                etc team
+        <div className="justify-center w-screen py-9 flex flex-col items-center  gap-12 relative">
+            <p className="text-white font-azonix text-3xl md:text-6xl font-normal ">
+                Managers
             </p>
 
             <div className="flex w-full">

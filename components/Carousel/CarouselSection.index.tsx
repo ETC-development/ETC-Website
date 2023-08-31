@@ -36,7 +36,7 @@ const CarouselSection = ({
                 {/* <BgWave /> */}
             </div>
             <div className="w-full absolute left-0 top-0 flex flex-col py-[30px] lg:py-[50px] px-[10px] 2xl:px-[50px] bg-transparent">
-                <h1 className="font-azonix text-[32px] lg:text-[40px] text-white font-[400] text-center">
+                <h1 className="font-azonix text-3xl md:text-6xl text-white font-[400] text-center">
                     {sectionTitle}
                 </h1>
 

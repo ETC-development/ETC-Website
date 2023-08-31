@@ -37,7 +37,7 @@ export default function Navbar() {
     return (
         <div
             className={`
-    ${scrollingUp ? "bg-bg-color border-b mt-0" : "bg-bg-color md:bg-transparent border-b md:border-none lg:mt-2"}
+    ${scrollingUp ? "bg-bg-color border-b mt-0" : "bg-bg-color md:bg-transparent border-b md:border-none lg:mt-4"}
     top-0 w-screen fixed md:py-2 z-50 px-5 py-4 lg:px-14 border-silver-white/60 lg:flex lg:items-center lg:justify-between 
     `}
         >

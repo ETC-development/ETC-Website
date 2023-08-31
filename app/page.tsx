@@ -5,11 +5,13 @@ import Navbar from "@/components/NavBar/Navbar.index";
 import Newsletter from "@/components/Newsletter/Newsletter.index";
 import Projects from "@/components/Projects/Projects.index";
 import Team from "@/components/Team/Team.index";
+import Background from "@/components/background/Background";
 import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
 
 export default function Home() {
     return (
-        <>
+        <div className="flex flex-col gap-32">
+            <Background/>
             <Navbar />
             <Hero />
             <FadeInWhenVisible>
@@ -27,6 +29,6 @@ export default function Home() {
             {/* <Footer /> */}
             {/* <div className='font-montserrat'>This is a sample text</div> */}
             {/* <div className='font-azonix'>This is a sample text</div> */}
-        </>
+        </div>
     );
 }
