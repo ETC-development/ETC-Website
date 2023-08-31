@@ -17,7 +17,7 @@ import rightArrow from "../../public/Right arrow.svg";
 
 import { CarouselSectionProps } from "@/types";
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
+SwiperCore.use([Navigation, Scrollbar, A11y, EffectFade]);
 
 const CarouselSection = ({
     sectionTitle,
@@ -99,10 +99,7 @@ const CarouselSection = ({
                         navigation={{ nextEl: ".arrow-left-bottom", prevEl: ".arrow-right-bottom" }}
                         slidesPerView={3}
                         slideToClickedSlide={true}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={[Pagination, Controller]}
+                        modules={[Controller]}
                     >    
                         <SwiperSlide> <div></div> </SwiperSlide>
                         {sectionData.map((data, index) => (

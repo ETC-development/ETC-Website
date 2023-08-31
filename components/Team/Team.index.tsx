@@ -1,19 +1,18 @@
 "use client";
 
-import { useState} from "react"
+import React, {useState} from "react"
 import { Swiper , SwiperSlide } from "swiper/react"
 
+import SwiperCore from "swiper";
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
-import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { EffectCoverflow , Pagination , Navigation } from "swiper/modules"
+import { EffectCoverflow , Navigation, Controller } from "swiper/modules"
 import TeamCard from "./TeamCard"
 
-
-
+SwiperCore.use([EffectCoverflow , Navigation]);
 export default function Team() { 
     
     const handleChange = ()=>{
@@ -21,6 +20,7 @@ export default function Team() {
        slide?.classList.add("fade");
     }
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
 
     const managers = [
         {
@@ -70,21 +70,27 @@ export default function Team() {
         }
 ];
     const activeManager = managers[activeSlideIndex];
+    const [thirdSwiper, setThirsSwiper] = useState<SwiperCore>();
 
-    return <div className="bg-bg-color w-screen py-9 flex flex-col items-center  gap-12 ">
+
+    return <div className="bg-bg-color w-screen py-9 flex flex-col items-center  gap-12 relative">
         <p className=" text-white font-azonix text-[40px] md:text-[70px] font-normal ">
            etc team 
         </p>
-      
-        <div className=" relative w-[90%] flex items-center justify-center  gap-12 py-4 ">
-            <Swiper
-              
-            onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
 
+        <div className=" w-[90%] flex items-center justify-center  gap-12 py-4 relative">
+        <div className="team-bg border w-[250px] h-[250px]  rounded-full md:w-[435px] md:h-[435px] opacity-80 bg-[#00B1E5] blur-[250px] absolute left-[20%]">
+      </div>
+            <Swiper
+            modules={[Controller]}
+            onSwiper={setThirsSwiper}
+            controller={{ control: thirdSwiper }}
+            onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
+            initialSlide={2}
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
-            loop={false}
+            loop={false} 
             slidesPerView={'auto'}
             coverflowEffect={{
                 rotate: 0,
@@ -92,17 +98,14 @@ export default function Team() {
                 depth: 100,
                 modifier: 7,
             }}
-
-            pagination={{ clickable: true }}
             navigation={{
                 nextEl:'.swiper-button-next' , 
-                prevEl:'.swiper-button-prev' , 
+                prevEl:'.swiper-button-prev' 
             }}
-            modules={[EffectCoverflow , Pagination , Navigation]}
             className="swiper_container w-full md:w-[65%] md:!m-0  "
             >
                  { managers.map(( content , index  ) =>
-                     <SwiperSlide className=" !w-auto  "> 
+                     <SwiperSlide className="swiper-slide !w-auto  " key={index}> 
                         <TeamCard 
                         // isActive={index === activeSlideIndex}
                         {...content}
@@ -125,9 +128,6 @@ export default function Team() {
                         alt="" 
                         className=""
                         /> 
-                    </div>
-                    <div className=" swiper-pagination ">
-                        
                     </div>
                  </div>
             </Swiper>

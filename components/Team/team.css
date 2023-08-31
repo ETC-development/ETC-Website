@@ -1,6 +1,7 @@
-.bg-teamCard{
-    background: linear-gradient(136deg, rgba(7, 79, 87, 0.50) 0%, rgba(7, 79, 87, 0.50) 100%);
-    backdrop-filter: blur(15px);
+.swiper-slide{
+        border-radius: 25px;
+        background-color: linear-gradient(136deg, rgba(7, 79, 87, 0.50) 0%, rgba(7, 79, 87, 0.50) 100%);
+        backdrop-filter: blur(30px);
 }
 
 .manager_title{
@@ -11,8 +12,17 @@
     font-size: 25px;
 }
 
+
 .fade{
  animation: move 2s ease-in;
+}
+
+.swiper-slide-shadow-left{
+        border-radius: 25px;
+}
+
+.swiper-slide-shadow-right{
+        border-radius: 25px;
 }
 
 @keyframes move{

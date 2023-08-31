@@ -37,15 +37,15 @@ export default function Navbar() {
 
   return (
     <div className={`
-    ${scrollingUp ? "bg-bg-color border-b" : "bg-transparent border-none"}
-    w-screen fixed  py-2  md:py-0 px-5 lg:px-14  border-silver-white lg:flex lg:items-center lg:justify-between
+    ${scrollingUp ? "bg-bg-color border-b mt-0" : "bg-transparent border-none lg:mt-4"}
+    top-0 w-screen fixed py-2 z-50 md:py-0 px-5 lg:px-14 border-silver-white lg:flex lg:items-center lg:justify-between 
     `}>
-      <div className="btn-ellipse-blur hover-glow left-0 bg-cyan "></div>
-      <div className=" btn-ellipse-blur hover-glow right-[40%] bg-cyan "></div>
-      <div className="btn-ellipse-blur hover-glow right-0 lg:right-[35%] bg-cyan "></div>
-      <div className="btn-ellipse-blur hover-glow left-[25%] bg-cyan "></div>
+      <div className="btn-ellipse-blur hover-glow left-0 bg-cyan absolute"></div>
+      <div className=" btn-ellipse-blur hover-glow right-[40%] bg-cyan absolute"></div>
+      <div className="btn-ellipse-blur hover-glow right-0 lg:right-[35%] bg-cyan absolute"></div>
+      <div className="btn-ellipse-blur hover-glow left-[25%] bg-cyan absolute"></div>
      
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center relative">
         
         <div className=
          {`
@@ -67,18 +67,19 @@ export default function Navbar() {
       
         <div 
         onClick={toggleHidden}
-        className={`
-        ${scrollingUp ? "relative" : "absolute right-2 top-2"}
-        lg:hidden p-2
+        className={` relative
+        lg:hidden m-2 h-full grid grid-cols-6 w-full
         `}
         >
+                <div className={`${scrollingUp ? "relative col-end-8 " : "col-end-8 p-2"}`}>
             {
                 isHidden?  <MoreNavbar  /> :  <Cross color='#DADBDD'/>
             }
+            </div>
         </div>
       </div>
       <div 
-      className={ `flex lg:flex flex-col lg:flex-row gap-[10px] lg:gap-0  lg:w-[70%] lg:justify-between  lg:gap-[50px] p-4 
+      className={ `flex lg:flex flex-col lg:flex-row justify-between lg:w-[60%] gap-2
        ${isHidden ? 'hidden' : ''}
        `}>
         <Button2 text={'Home'} isActive={false} />

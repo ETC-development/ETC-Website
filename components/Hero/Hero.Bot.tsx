@@ -29,7 +29,7 @@ export default function HeroBot() {
 
 
 
-        return   <div className="hero-bot h-[300px] w-[100%] md:ml-4 lg:mr-3 md:w-[90%] md:h-[400px] md:max-w  relative">
+        return   <div className="hero-bot h-[300px] w-[100%] md:ml-4 lg:mr-3 md:w-[90%] md:h-[400px] md:max-w  relative lg:w-[60%]">
 
         <div className="stat-componenet top-[0%] left-[13%] sm:w-[35%]  md:left-[-3%] w-fit md:w-[50%] absolute">
         <Statistics text="181 Members" icon={memsIcon} detail="" direction={20}></Statistics>
@@ -52,7 +52,7 @@ export default function HeroBot() {
         repeatType: "loop",
         ease: "easeInOut", 
       },}}
-        className="big-bot w-1/2 top-[0%] left-[45%] sm:top-[-20%] md:top-[-3%]  md:left-[32%] lg:left-[36%] md:w-fit absolute">
+        className="big-bot w-1/2 top-[0%] left-[45%] sm:top-[-20%] md:top-[-3%]  md:left-[32%] lg:left-[36%] md:w-fit lg:w-1/2 absolute">
         <Image src={bigbot}  alt=""></Image>
         </motion.div>
 
