@@ -1,6 +1,8 @@
 
-import 'react-multi-carousel/lib/styles.css';
 import "./globals.css";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";

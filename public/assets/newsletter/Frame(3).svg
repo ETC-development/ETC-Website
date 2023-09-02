@@ -1,0 +1,29 @@
+<svg width="433" height="171" viewBox="0 0 433 171" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_716_26267)" filter="url(#filter0_f_716_26267)">
+<path opacity="0.8" d="M416.346 164.818H16.6536C10.9508 164.818 6.23975 160.326 6.23975 154.888V16.1116C6.23975 10.674 10.9508 6.18208 16.6536 6.18208H416.346C422.049 6.18208 426.76 10.674 426.76 16.1116V154.888C427.008 160.326 422.297 164.818 416.346 164.818Z" stroke="#00B1E5" stroke-width="0.9704" stroke-miterlimit="10"/>
+<path opacity="0.8" d="M139.388 26.0411H43.1841V92.4743H139.388V26.0411Z" fill="#00B1E5"/>
+<path opacity="0.8" d="M388.328 34.3157H172.117C171.373 34.3157 170.877 33.8429 170.877 33.1336V29.351C170.877 28.6417 171.373 28.1689 172.117 28.1689H388.328C389.072 28.1689 389.568 28.6417 389.568 29.351V33.1336C389.568 33.6065 388.824 34.3157 388.328 34.3157Z" stroke="#00B1E5" stroke-width="0.9704" stroke-miterlimit="10"/>
+<path opacity="0.8" d="M388.328 60.558H172.117C171.373 60.558 170.877 60.0852 170.877 59.3759V55.5932C170.877 54.884 171.373 54.4112 172.117 54.4112H388.328C389.072 54.4112 389.568 54.884 389.568 55.5932V59.3759C389.568 60.0852 388.824 60.558 388.328 60.558Z" stroke="#00B1E5" stroke-width="0.9704" stroke-miterlimit="10"/>
+<path opacity="0.8" d="M384.857 94.1292H168.894C168.15 94.1292 167.654 93.6564 167.654 92.9471V89.1645C167.654 88.4552 168.15 87.9824 168.894 87.9824H385.105C385.849 87.9824 386.345 88.4552 386.345 89.1645V92.9471C386.345 93.42 385.601 94.1292 384.857 94.1292Z" stroke="#00B1E5" stroke-width="0.9704" stroke-miterlimit="10"/>
+<path opacity="0.8" d="M384.857 120.372H32.5223C31.7784 120.372 31.2825 119.899 31.2825 119.189V115.407C31.2825 114.698 31.7784 114.225 32.5223 114.225H384.857C385.601 114.225 386.097 114.698 386.097 115.407V119.189C386.345 119.899 385.601 120.372 384.857 120.372Z" stroke="#00B1E5" stroke-width="0.9704" stroke-miterlimit="10"/>
+<path opacity="0.8" d="M388.328 144.486H35.7456C35.0018 144.486 34.5059 144.013 34.5059 143.304V139.521C34.5059 138.812 35.0018 138.339 35.7456 138.339H388.08C388.824 138.339 389.32 138.812 389.32 139.521V143.304C389.568 144.013 388.824 144.486 388.328 144.486Z" stroke="#00B1E5" stroke-width="0.9704" stroke-miterlimit="10"/>
+<g filter="url(#filter1_f_716_26267)">
+<circle cx="330.5" cy="69.5" r="50.5" fill="#01EAFE" fill-opacity="0.6"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_716_26267" x="0" y="0" width="433" height="171" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_716_26267"/>
+</filter>
+<filter id="filter1_f_716_26267" x="218" y="-43" width="225" height="225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="31" result="effect1_foregroundBlur_716_26267"/>
+</filter>
+<clipPath id="clip0_716_26267">
+<rect width="423" height="161" fill="white" transform="translate(5 5)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,6 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* #FFFFFF, #FFFFFF03, #FFFFFF03, #FFFFFFF7 */
+/* .border__gradient {
+  border-image-source: linear-gradient(
+    111.7deg,
+    rgba(255, 255, 255, 0.5) 6.03%,
+    rgba(255, 255, 255, 0.005) 35.39%,
+    rgba(255, 255, 255, 0.00500001) 74.06%,
+    rgba(255, 255, 255, 0.485) 100%
+  );
+  border-width: 2px;
+  border-style: solid;
+} */
+
+.bg__shadow__gradient {
+  box-shadow: 1px -2px 400px 2px rgba(0, 241, 134, 1);
+  -webkit-box-shadow: 1px -2px 400px 2px rgba(0, 241, 134, 1);
+  -moz-box-shadow: 1px -2px 400px 2px rgba(0, 241, 134, 1);
+}
+
+
+
 
 /* #FFFFFF, #FFFFFF03, #FFFFFF03, #FFFFFFF7 */
 /* .border__gradient {
@@ -31,3 +52,24 @@
     padding: 0;
 }
 
+body {
+    @apply bg-bg-color text-white overflow-x-hidden;
+}
+
+h1 {
+    @apply font-azonix font-bold text-4xl md:text-3xl lg:text-6xl;
+}
+
+h2 {
+    @apply font-montserrat text-xl md:text-2xl lg:text-3xl;
+}
+
+p {
+    @apply font-montserrat text-sm md:text-lg lg:text-lg ;
+}
+
+
+.elipse {
+    /* Ellipse 16 */
+    @apply absolute left-[4.24%] right-[89.31%] top-[73.83%] bottom-[17.09%] bg-[#00F186] blur-[42px]
+}
