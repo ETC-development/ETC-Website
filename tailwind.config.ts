@@ -19,6 +19,7 @@ const config: Config = {
         "black-carbon": "#0C0A00",
         "silver-white": "#DADBDD",
         "bg-color": "#002529",
+        "heart": "#00F186",
       },
       fontFamily: {
         azonix: ["var(--font-azonix)", "sans-serif"],

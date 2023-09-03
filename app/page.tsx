@@ -26,9 +26,9 @@ export default function Home() {
                 <Team />
             </FadeInWhenVisible>
             {/* <Newsletter /> */}
-            {/* <Footer /> */}
-            {/* <div className='font-montserrat'>This is a sample text</div> */}
-            {/* <div className='font-azonix'>This is a sample text</div> */}
+            <FadeInWhenVisible>
+                <Footer />
+            </FadeInWhenVisible>
         </div>
     );
 }
