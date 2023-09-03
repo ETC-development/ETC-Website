@@ -1,5 +1,4 @@
 import Image from "next/image";
-import DesktopBG from '../../public/BG_with_lines.webp';
 import './footer.css';
 
 import { faPhone, faLocationDot, faEnvelope, faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -9,17 +8,18 @@ import {
     faFacebook,
     faGithub,
     faInstagram,
-    faLinkedin,
     faLinkedinIn,
-    faSquareFacebook,
     faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 
 const data = {
     phone: "+213-555-933-788",
-    address: "ENSIA - Sidi Abdallah",
-    mail: "etc-tech@ensia.edu.dz"
+    address: {
+        name:  "ENSIA - Sidi Abdallah",
+        url: "https://goo.gl/maps/K12YhBFhtwvtb3d68"
+    },
+    mail: "tech-community@ensia.edu.dz"
 }
 const Footer = () => {
     return (
@@ -39,30 +39,30 @@ const Footer = () => {
                     />
             </div>
             <div className="flex flex-col justify-center font-bold lg:flex-row lg:justify-evenly lg:gap-20 pt-60">
-                <div className="flex flex-col items-center lg:order-3">
+                <div className="flex flex-col items-center lg:order-3 lg:w-1/3">
                     <h1 className='text-white font-montserrat text-2xl mb-3'>Contact us:</h1>
                     <ul className="flex flex-col flex-right">
-                        <li className='w-full flex items-center mt-2 mb-2 lg:flex-row-reverse'>
-                            <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center lg:ml-4">
+                        <li className='w-full flex items-center mt-2 mb-2 lg:flex-row'>
+                            <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center">
                                 <FontAwesomeIcon icon={faPhone} width={20} height={20} className="text-white" />
                             </div>
-                            <span className="text-white font-montserrat text-base pl-4"> {data.phone} </span>
+                            <a href={`tel:${data.phone}`} className="text-white font-montserrat text-base pl-4"> {data.phone} </a>
                         </li>
-                        <li className='w-full flex items-center mt-2 mb-2 lg:flex-row-reverse'>
-                            <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center lg:ml-4">
+                        <li className='flex items-center mt-2 mb-2 lg:flex-row'>
+                            <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center">
                                 <FontAwesomeIcon icon={faEnvelope} width={20} height={20} className="text-white" />
                             </div>
-                            <span className="text-white font-montserrat text-base pl-4"> {data.mail} </span>
+                            <a href={`mailto:${data.mail}`} className="text-white font-montserrat text-base pl-4"> {data.mail} </a>
                         </li>
-                        <li className='w-full flex items-center mt-2 mb-2 lg:flex-row-reverse'>
-                            <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center lg:ml-4">
+                        <li className='w-full flex items-center mt-2 mb-2 lg:flex-row'>
+                            <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center">
                                 <FontAwesomeIcon icon={faLocationDot} width={20} height={20} className="text-white" />
                             </div>
-                            <span className="text-white font-montserrat text-base pl-4"> {data.address} </span>
+                            <a href={data.address.url} className="text-white font-montserrat text-base pl-4"> {data.address.name} </a>
                         </li>
                     </ul>
                 </div>
-                <div className='flex flex-col items-center lg:order-1 mt-10 mb-10 lg:mt-0 lg:mb-0'>
+                <div className='flex flex-col items-center lg:order-1 mt-10 mb-10 lg:mt-0 lg:mb-0 !text-bg-color lg:w-1/3'>
                     <h1 className='text-white font-montserrat text-2xl mb-3'>Follow us:</h1>
                     <div className='flex flex-row justify-between mt-4 mb-2'>
                         <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href="https://www.instagram.com/etc_.club/" target="_blank">
@@ -79,7 +79,7 @@ const Footer = () => {
                         <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href='https://www.linkedin.com/company/ensia-tech-community/mycompany/' target="_blank">
                             <FontAwesomeIcon icon={faLinkedinIn} width={27} height={27} />
                         </a>
-                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white' href='https://twitter.com/ETC_ensia_club?t=2JcPy6jMjj7oycCz3HqbgQ&s=09&fbclid=IwAR19p67RntHc7J5DPsX0BoCfqBmo6FEtJmIQFiTy0qQsBal-OHUvgUG2-Bk' target="_blank">
+                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white' href='https://twitter.com/ETC_ensia_club' target="_blank">
                             <FontAwesomeIcon icon={faXTwitter} width={35} height={35} />
                         </a>
                         <a href='https://www.facebook.com/ensia.tech.community/' target="_blank">
@@ -87,8 +87,8 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className='flex flex-col items-center lg:order-2'>
-                    <div>
+                <div className='flex flex-col items-center lg:order-2 lg:w-1/3'>
+                    <div className="flex items-center gap-2">
                         <span className='text-white font-montserrat text-2xl'>Made with </span>
                         <FontAwesomeIcon icon={faHeart} width={36} height={30.86} className="text-heart inline" />
                         <span className='text-white font-montserrat text-2xl'> by: </span>
@@ -101,7 +101,7 @@ const Footer = () => {
                     />
                 </div>
             </div>
-            <div className="text-white font-montserrat lg:pr-20 mb-4">
+            <div className="text-white font-montserrat mb-4">
                 <p className="text-center">All Rights Reserved {new Date().getFullYear()}</p>
                 <a href="https://www.gnu.org/licenses/gpl-3.0.txt">
                     <p className="text-white font-montserrat text-center">License Information</p>
