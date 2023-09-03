@@ -21,6 +21,15 @@ const data = {
     },
     mail: "tech-community@ensia.edu.dz"
 }
+
+const links = {
+    instagram: "https://www.instagram.com/etc_.club/",
+    github: "https://github.com/ETC-development",
+    discord: 'https://discord.gg/zRKqVc67hN',
+    linkedin: 'https://www.linkedin.com/company/ensia-tech-community/mycompany/',
+    twitter: 'https://twitter.com/ETC_ensia_club',
+    facebook: 'https://www.facebook.com/ensia.tech.community/'
+}
 const Footer = () => {
     return (
         <footer className="footer flex flex-col justify-center font-bold bg-cover bg-cover relative">
@@ -65,24 +74,24 @@ const Footer = () => {
                 <div className='flex flex-col items-center lg:order-1 mt-10 mb-10 lg:mt-0 lg:mb-0 !text-bg-color lg:w-1/3'>
                     <h1 className='text-white font-montserrat text-2xl mb-3'>Follow us:</h1>
                     <div className='flex flex-row justify-between mt-4 mb-2'>
-                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href="https://www.instagram.com/etc_.club/" target="_blank">
+                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href={links.instagram} target="_blank">
                             <FontAwesomeIcon icon={faInstagram} width={30} height={30} />
                         </a>
-                        <a href="https://github.com/ETC-development" target="_blank">
+                        <a href={links.github} target="_blank">
                             <FontAwesomeIcon icon={faGithub} className="w-10 h-10 text-white" />
                         </a>
-                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href='https://discord.gg/zRKqVc67hN' target="_blank">
+                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href={links.discord} target="_blank">
                             <FontAwesomeIcon icon={faDiscord} width={35} height={35} />
                         </a>
                     </div>
                     <div className='flex flex-row justify-between mt-2 mb-4'>
-                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href='https://www.linkedin.com/company/ensia-tech-community/mycompany/' target="_blank">
+                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href={links.linkedin} target="_blank">
                             <FontAwesomeIcon icon={faLinkedinIn} width={27} height={27} />
                         </a>
-                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white' href='https://twitter.com/ETC_ensia_club' target="_blank">
+                        <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white' href={links.twitter} target="_blank">
                             <FontAwesomeIcon icon={faXTwitter} width={35} height={35} />
                         </a>
-                        <a href='https://www.facebook.com/ensia.tech.community/' target="_blank">
+                        <a href={links.facebook} target="_blank">
                             <FontAwesomeIcon icon={faFacebook} className="w-10 h-10 text-white mr-4 ml-4" target="_blank" />
                         </a>
                     </div>
