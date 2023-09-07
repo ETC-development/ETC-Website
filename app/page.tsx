@@ -25,7 +25,11 @@ export default function Home() {
             <FadeInWhenVisible>
                 <Team />
             </FadeInWhenVisible>
-            {/* <Newsletter /> */}
+
+            <FadeInWhenVisible>
+                <Newsletter />
+            </FadeInWhenVisible>
+
             <FadeInWhenVisible>
                 <Footer />
             </FadeInWhenVisible>
