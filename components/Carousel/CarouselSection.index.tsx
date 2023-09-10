@@ -31,7 +31,7 @@ const CarouselSection = ({
     const [secondSwiper, setSecondSwiper] = useState<SwiperCore>();
 
     return (
-        <div className=" w-full bg-center overflow-hidden relative ">
+        <div className=" w-full bg-center overflow-hidden relative " id={sectionTitle}>
             <div className="w-screen h-[600px] lg:h-[800px] opacity-30 my-auto relative z-50 pointer-events-none	">
                 {/* <BgWave /> */}
             </div>

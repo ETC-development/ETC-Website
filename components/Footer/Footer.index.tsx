@@ -32,7 +32,7 @@ const links = {
 }
 const Footer = () => {
     return (
-        <footer className="footer flex flex-col justify-center font-bold bg-cover bg-cover relative">
+        <footer id="Contacts" className="footer flex flex-col justify-center font-bold bg-cover relative">
             <div className="flex flex-row absolute bottom-4 invisible lg:visible justify-between w-full">
             <Image
                         src={"/circuit-footer-left.webp"}
@@ -40,7 +40,7 @@ const Footer = () => {
                         width={271}
                         height={261}
                     />
-                                <Image
+           <Image
                         src={"/circuit-footer-right.webp"}
                         alt="ETC logo"
                         width={271}
@@ -53,19 +53,19 @@ const Footer = () => {
                     <ul className="flex flex-col flex-right">
                         <li className='w-full flex items-center mt-2 mb-2 lg:flex-row'>
                             <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center">
-                                <FontAwesomeIcon icon={faPhone} width={20} height={20} className="text-white" />
+                                <FontAwesomeIcon icon={faPhone} size="lg" className="text-white" />
                             </div>
                             <a href={`tel:${data.phone}`} className="text-white font-montserrat text-base pl-4"> {data.phone} </a>
                         </li>
                         <li className='flex items-center mt-2 mb-2 lg:flex-row'>
                             <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center">
-                                <FontAwesomeIcon icon={faEnvelope} width={20} height={20} className="text-white" />
+                                <FontAwesomeIcon icon={faEnvelope} size="lg" className="text-white" />
                             </div>
                             <a href={`mailto:${data.mail}`} className="text-white font-montserrat text-base pl-4"> {data.mail} </a>
                         </li>
                         <li className='w-full flex items-center mt-2 mb-2 lg:flex-row'>
                             <div className="w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center">
-                                <FontAwesomeIcon icon={faLocationDot} width={20} height={20} className="text-white" />
+                                <FontAwesomeIcon icon={faLocationDot} size="lg" className="text-white" />
                             </div>
                             <a href={data.address.url} className="text-white font-montserrat text-base pl-4"> {data.address.name} </a>
                         </li>
@@ -75,31 +75,31 @@ const Footer = () => {
                     <h1 className='text-white font-montserrat text-2xl mb-3'>Follow us:</h1>
                     <div className='flex flex-row justify-between mt-4 mb-2'>
                         <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href={links.instagram} target="_blank">
-                            <FontAwesomeIcon icon={faInstagram} width={30} height={30} />
+                            <FontAwesomeIcon icon={faInstagram} size="xl" />
                         </a>
                         <a href={links.github} target="_blank">
                             <FontAwesomeIcon icon={faGithub} className="w-10 h-10 text-white" />
                         </a>
                         <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href={links.discord} target="_blank">
-                            <FontAwesomeIcon icon={faDiscord} width={35} height={35} />
+                            <FontAwesomeIcon icon={faDiscord} size="xl"/>
                         </a>
                     </div>
                     <div className='flex flex-row justify-between mt-2 mb-4'>
                         <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white mr-4 ml-4' href={links.linkedin} target="_blank">
-                            <FontAwesomeIcon icon={faLinkedinIn} width={27} height={27} />
+                            <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
                         </a>
                         <a className='social-media w-10 h-10 rounded-full border-4 border-white flex flex-row justify-center items-center bg-white' href={links.twitter} target="_blank">
-                            <FontAwesomeIcon icon={faXTwitter} width={35} height={35} />
+                            <FontAwesomeIcon icon={faXTwitter} size="xl" />
                         </a>
                         <a href={links.facebook} target="_blank">
-                            <FontAwesomeIcon icon={faFacebook} className="w-10 h-10 text-white mr-4 ml-4" target="_blank" />
+                            <FontAwesomeIcon icon={faFacebook} size="xl" className="w-10 h-10 text-white mr-4 ml-4" target="_blank" />
                         </a>
                     </div>
                 </div>
                 <div className='flex flex-col items-center lg:order-2 lg:w-1/3'>
                     <div className="flex items-center gap-2">
                         <span className='text-white font-montserrat text-2xl'>Made with </span>
-                        <FontAwesomeIcon icon={faHeart} width={36} height={30.86} className="text-heart inline" />
+                        <FontAwesomeIcon icon={faHeart} size="xl" className="text-heart inline" />
                         <span className='text-white font-montserrat text-2xl'> by: </span>
                     </div>
                     <Image

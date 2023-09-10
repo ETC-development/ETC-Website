@@ -5,6 +5,9 @@ import TextInput from "../utils/TextInput";
 import Neurons from "../../public/assets/newsletter/neurons.svg";
 import NewsLetterButton from "./Newsletter.button";
 import handleSubmit from "./Newsletter.handler";
+import Image from "next/image";
+import {motion} from "framer-motion";
+
 
 
 export default function NewsletterForground() {
@@ -19,8 +22,22 @@ export default function NewsletterForground() {
 
     return (
         <div className={divStyles}>
-            <img src={Neurons.src} className="object-contain flex-1 absolute z-10  
-            scale-[150%] lg:scale-[150%] bottom-0 glow-animation" draggable={false}/>
+        <motion.div  className="glow-animation object-contain flex-1 absolute z-10 scale-[150%] lg:scale-[150%] bottom-0"
+        initial={{ filter: "drop-shadow(0 0 5px #00F18610)" }}
+        animate={{
+                filter: [
+                "drop-shadow(0 0 5px #00F18610)",
+                "drop-shadow(0 0 5px #00F18610) drop-shadow(0 0 7px #00F186F0)",
+                "drop-shadow(0 0 5px #00F18610)",
+                ],
+        }}
+        transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "reverse",
+        }}>
+                <Image src={Neurons} alt="neurons"></Image>
+        </motion.div>
             <div className="m-auto flex flex-col  justify-evenly w-full h-full">
                 <div className="z-20 flex flex-col justify-around gap-10 px-[5%]">
                     <h1>NewsLetter</h1>

@@ -10,8 +10,8 @@ import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-32">
-            <Background/>
+        <div className="flex flex-col gap-20">
+            <Background />
             <Navbar />
             <Hero />
             <FadeInWhenVisible>
