@@ -11,7 +11,7 @@ import HeroDesc from "./Hero.Desc";
 
 export default function Hero() {
     return (
-        <div className="hero z-0 mt-5 overflow-x-hidden overflow-y-visible h-fit w-full flex justify-center">
+        <div id="Home" className="hero z-0 mt-5 overflow-x-hidden overflow-y-visible h-fit w-full flex justify-center">
             <div className="hero-container p-[1px] w-full max-h-full lg:max-w-[95%] xl:max-w-[95%]">
                 <div className="hero-card w-full max-h-full pl-2 pr-2  pt-5 pb-6 md:pb-4 sm:pl-5 md:pr-0 ">
                     <div className="logo flex top-0 left-0 items-center gap-4 sm:gap-4 ml-4 md:ml-0 w-fit">

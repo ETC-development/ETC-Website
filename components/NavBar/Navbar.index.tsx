@@ -14,9 +14,6 @@ export default function Navbar() {
         setIsHidden(!isHidden);
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,10 +31,11 @@ export default function Navbar() {
         };
     }, []);
 
+
     return (
         <div
             className={`
-    ${scrollingUp ? "bg-bg-color border-b mt-0" : "bg-bg-color md:bg-transparent border-b md:border-none lg:mt-4"}
+    ${scrollingUp ? "bg-bg-color border-b mt-0" : "bg-transparent  md:border-none lg:mt-4"}
     top-0 w-screen fixed md:py-2 z-50 px-5 py-4 lg:px-14 border-silver-white/60 lg:flex lg:items-center lg:justify-between 
     `}
         >
@@ -49,7 +47,7 @@ export default function Navbar() {
             <div className="flex justify-between items-center relative">
                 <div
                     className={`
-         ${scrollingUp ? "flex" : "flex md:hidden"}
+         ${scrollingUp ? "flex" : "hidden"}
           gap-[10px] items-center relative group
          `}
                 >
@@ -77,14 +75,14 @@ export default function Navbar() {
                 </div>
             </div>
             <div
-                className={`flex lg:flex flex-col lg:flex-row justify-between lg:w-[60%] gap-2
+                className={`flex lg:flex flex-col lg:flex-row justify-between bg-bg-color p-5 md:p-0 md:bg-transparent lg:w-[60%] gap-2
        ${isHidden ? "hidden" : ""}
        `}
             >
-                <Button2 text={"Home"} isActive={false} />
-                <Button2 text={"Events"} isActive={false} />
+                <Button2 text={"Home"} isActive={false }  />
+                <Button2 text={"Events"} isActive={false}  />
                 <Button2 text={"Projects"} isActive={false} />
-                <Button2 text={"Contacts"} isActive={false} />
+                <Button2 text={"Contacts"} isActive={false}  />
                 <div className="hidden lg:flex ">
                     <Button1 onSubmit={() => {}} text={"Register Now"} />
                 </div>

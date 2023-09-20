@@ -65,7 +65,7 @@ h2 {
 }
 
 p {
-    @apply font-montserrat text-sm md:text-lg lg:text-lg ;
+    @apply font-montserrat text-sm md:text-base lg:text-base ;
 }
 
 

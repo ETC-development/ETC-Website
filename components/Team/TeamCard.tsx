@@ -44,7 +44,7 @@ export default function TeamCard({
         isFlipped={flip}
         flipDirection="horizontal">
         <div className="team-card relative
-        flex flex-col items-center gap-10 md:gap-3 w-[324.5px] h-[400px] md:h-fit rounded-[25px] border-[0.5px] p-3"
+        flex flex-col items-center gap-10 md:gap-3 w-[324px] h-[400px] md:h-fit rounded-[25px] border-[0.5px] p-3"
         onClick={handleClick}
         >
                 
@@ -70,8 +70,8 @@ export default function TeamCard({
                         {name}
                         </p>
                 </div>
-                <div className="manager-year-talent flex flex-col md:hidden items-center text-white text-[16px] gap-1 ">
-                        <p className="talent ">
+                <div className="manager-year-talent  flex flex-col md:hidden items-center justify-center text-white text-[16px] gap-1 ">
+                        <p className="talent">
                         {talent}
                         </p>
                         <p className="year">
@@ -82,7 +82,7 @@ export default function TeamCard({
               
 
          <div className="contact bottom-0 absolute md:relative">
-          <ManagerContact discordLink=" " emailLink={email} linkedinLink=" "  />
+          <ManagerContact githubLink=" " emailLink={email} linkedinLink=" "  />
           </div>
           </div>
             </div>
@@ -90,7 +90,7 @@ export default function TeamCard({
      
            <div 
            className={`
-           flex flex-col items-center justify-center gap-[20px] w-[300px] h-[400px] shrink-0 rounded-[25px] border borderr-[#C3C3C3] bg-bg-color 
+           flex flex-col items-center justify-center gap-[20px] w-[324px] h-[400px] shrink-0 rounded-[25px] border borderr-[#C3C3C3] bg-bg-color 
            `}
            onClick={() => setFlip(!flip)}
            >   
