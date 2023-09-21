@@ -12,10 +12,11 @@ import bot3P from "../../public/assets/registration/Bot3P.svg"
 import bot4 from "../../public/assets/registration/Bot4.svg"
 import bot4P from "../../public/assets/registration/Bot4P.svg"
 import discord from "../../public/assets/registration/Discord.svg"
-
+import back from "../../public/assets/registration/Backbtn.svg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination , Navigation} from "swiper/modules";
 import { Departements } from "@/constants";
+import Link from "next/link";
 import "./registration.css"
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,6 +25,17 @@ export default function Main(){
 
     return (
        <form className="flex py-14 lg:pt-24 px-7 gap-10 bg-[#00282A] flex-col w-[90%] lg:w-[80%] rounded-3xl z-10 relative">
+            <Link
+             href="/"
+            >
+            <Image
+             className=" absolute top-4 left-4 md:w-9"
+             src={back}
+             alt=""
+            >
+            </Image>
+            </Link>
+           
             <Image 
                 className="animationReg hidden lg:flex absolute top-10 right-6 "
                 src={bot1}  
