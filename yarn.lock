@@ -265,12 +265,13 @@
 
 "@next/swc-darwin-arm64@13.4.16":
   version "13.4.16"
-  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.16.tgz#ed6a342f95e5f21213fdadbceb65b40ae678cee0"
+
+  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.16.tgz"
   integrity sha512-Rl6i1uUq0ciRa3VfEpw6GnWAJTSKo9oM2OrkGXPsm7rMxdd2FR5NkKc0C9xzFCI4+QtmBviWBdF2m3ur3Nqstw==
 
 "@next/swc-darwin-x64@13.4.16":
   version "13.4.16"
-  resolved "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-13.4.16.tgz"
+  resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-13.4.16.tgz#36c16066a1a3ef8211e84a6a5d72bef15826b291"
   integrity sha512-o1vIKYbZORyDmTrPV1hApt9NLyWrS5vr2p5hhLGpOnkBY1cz6DAXjv8Lgan8t6X87+83F0EUDlu7klN8ieZ06A==
 
 "@next/swc-linux-arm64-gnu@13.4.16":
