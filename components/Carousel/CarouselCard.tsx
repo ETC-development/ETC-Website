@@ -10,7 +10,7 @@ const CarouselCard = ({
 }: CarouselCardProps) => {
 
   return (
-    <div
+    <div 
       className="relative w-full md:w-[280px] mx-auto lg:w-[450px] lg:h-[350px] overflow-hidden h-[240px] bg-[#E8E8E84D] rounded-[20px] border__gradient"
     >
       <div className="h-full w-full relative transition-all ease-in duration-[3000ms] top-[-35px] group">
@@ -39,7 +39,7 @@ const CarouselCard = ({
             )}
           </div>
 
-          <p className="font-montserrat text-[8px] lg:text-[12px] lg:px-[10px] lg:leading-[24px] leading-[13px] text-white mt-[20px] text-center font-[400] ">
+          <p className="font-montserrat text-[10px] lg:text-[14px] px-[10px] lg:leading-[24px] leading-[13px] text-white mt-[20px] text-center font-[400] ">
             {cardDescription}
           </p>
         </div>

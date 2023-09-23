@@ -22,7 +22,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 25px;
+    line-height: 50px;
 }
 
 

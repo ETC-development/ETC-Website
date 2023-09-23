@@ -10,11 +10,19 @@ interface ButtonInterface {
 
 export default function Button2({ text, isActive }: ButtonInterface) {
     const [active, setActive] = useState(isActive);
+    const scrollToSection = () => {
+        const section = document.getElementById(text);
+            if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      };
 
     return (
         <button
             onClick={() => {
-                setActive(!active);
+                setActive(active);
+                scrollToSection();
+
             }}
             className=" relative bg-[#0C0A00] w-full font-montserrat  text-silver-white rounded-full  cursor-pointer group"
         >
