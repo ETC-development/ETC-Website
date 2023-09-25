@@ -5,10 +5,18 @@ import Button2 from "../utils/Button2";
 import Button1 from "../utils/Button1";
 import MoreNavbar from "../utils/MoreNavbar";
 import Cross from "../utils/cross";
+import clsx from "clsx";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
     const [isHidden, setIsHidden] = useState(true);
     const [scrollingUp, setScrollingUp] = useState(false);
+
+    const router = useRouter()
+
+    const gotoRegPage = () => {
+        router.push("/registrations")
+    }
 
     const toggleHidden = () => {
         setIsHidden(!isHidden);
@@ -84,7 +92,7 @@ export default function Navbar() {
                 <Button2 text={"Projects"} isActive={false} />
                 <Button2 text={"Contacts"} isActive={false}  />
                 <div className="hidden lg:flex ">
-                    <Button1 onSubmit={() => {}} text={"Register Now"} />
+                    <Button1 onSubmit={gotoRegPage} text={"Register Now"} />
                 </div>
             </div>
         </div>
