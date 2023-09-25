@@ -8,8 +8,18 @@ import "./hero.css";
 
 import HeroBot from "./Hero.Bot";
 import HeroDesc from "./Hero.Desc";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+
+
+    const router = useRouter();
+
+    const gotoRegPage = () => {
+        router.push("/registrations");
+    };
+
+
     return (
         <div id="Home" className="hero z-0 mt-5 overflow-x-hidden overflow-y-visible h-fit w-full flex justify-center">
             <div className="hero-container p-[1px] w-full max-h-full lg:max-w-[95%] xl:max-w-[95%]">
@@ -28,7 +38,7 @@ export default function Hero() {
                         <div className="image-tech w-[800px] md:w-[600px] lg:w-[800px] bottom-0 rotate-90 md:rotate-0 sm:right-0 absolute">
                             <Image className="tech" src={tech} alt=""></Image>
                         </div>
-                        <HeroDesc></HeroDesc>
+                        <HeroDesc onRegBtnClick={gotoRegPage}></HeroDesc>
 
                         <HeroBot></HeroBot>
                     </div>
