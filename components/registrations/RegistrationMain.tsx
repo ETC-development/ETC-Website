@@ -37,7 +37,7 @@ const calculateTimeLeft = (date: any): ITimeLeft | {} => {
 };
 
 
-export default function Main() {
+export default function RegistrationMain() {
 
 
     const [timeLeft, setTimeLeft] = useState<ITimeLeft | {}>(calculateTimeLeft(openDayDate));
@@ -50,7 +50,7 @@ export default function Main() {
 
     return (
         <form
-            className="flex py-14 lg:pt-24 px-7 gap-10 bg-[#00282A] flex-col w-[90%] lg:w-[80%] rounded-3xl z-10 relative">
+            className="flex backdrop-blur-lg py-14 lg:pt-24 px-7 gap-10 bg-[#00282A] flex-col w-[90%] lg:w-[80%] rounded-3xl z-10 relative">
             <Link
                 href="/"
             >

@@ -7,15 +7,33 @@ import Projects from "@/components/Projects/Projects.index";
 import Team from "@/components/Team/Team.index";
 import Background from "@/components/background/Background";
 import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { Database } from "@/lib/database.types";
 
-export default function Home() {
+export default async function Home() {
+
+    const supabase = createServerComponentClient<Database>({ cookies })
+
+    const {data: clubInfoData, error: infoError} = await supabase.from("club_info").select("*").single();
+
+    const {data: projects, error: projectsError} = await supabase.from("projects").select("*")
+
+    const {data: teamMembers, error: teamError} = await supabase.from("managers").select("*")
+
+
+    if (infoError || projectsError || teamError)
+        return
+
+
+
     return (
         <div className="flex flex-col gap-20 overflow-hidden">
             <Background />
             <Navbar />
-            <Hero />
+            <Hero clubInfo={clubInfoData} />
             <FadeInWhenVisible>
-                <Projects />
+                <Projects projects={projects} />
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
@@ -23,15 +41,15 @@ export default function Home() {
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
-                <Team />
+                <Team teamMembers={teamMembers} />
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
-                <Newsletter />
+                <Newsletter clubInfo={clubInfoData} />
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
-                <Footer />
+                <Footer clubInfo={clubInfoData} />
             </FadeInWhenVisible>
         </div>
     );

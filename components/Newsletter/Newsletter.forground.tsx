@@ -7,10 +7,15 @@ import NewsLetterButton from "./Newsletter.button";
 import handleSubmit from "./Newsletter.handler";
 import Image from "next/image";
 import {motion} from "framer-motion";
+import { Database } from "@/lib/database.types";
 
 
 
-export default function NewsletterForground() {
+interface INewsletterProps {
+    clubInfo: Database["public"]["Tables"]["club_info"]["Row"];
+}
+
+export default function NewsletterForground({clubInfo}: INewsletterProps) {
     const [email, setEmail] = useState<string>("test@test.com");
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -40,15 +45,10 @@ export default function NewsletterForground() {
         </motion.div>
             <div className="m-auto flex flex-col  justify-evenly w-full h-full">
                 <div className="z-20 flex flex-col justify-around gap-10 px-[5%]">
-                    <h1>NewsLetter</h1>
-                    <h2 className="font-bold">LET'S STAY IN TOUCH</h2>
+                    <h1>{clubInfo.newsletter_title}</h1>
+                    <h2 className="font-bold">{clubInfo.newsletter_subtitle}</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {clubInfo.newsletter_desc}
                     </p>
                 </div>
                 <form className="z-50 flex flex-col justify-around items-center gap-5">

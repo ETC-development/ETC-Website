@@ -1,4 +1,6 @@
 "use client"
+import { useEffect, useState } from "react";
+
 interface ICardContent {
     text: string;
     type: string;
@@ -9,12 +11,21 @@ const padNumber = (numberStr: string) => {
     const num = +numberStr;
 
     if(num < 10 && num >= 0)
-        return `O${numberStr}`
+        return `0${numberStr}`
 
     return numberStr
 }
 
 export default function CountdownCard({ text, type }: ICardContent) {
+
+    const [hydrated, setHydrated] = useState(false)
+
+    useEffect(()=> {
+        setHydrated(true)
+    }, [])
+
+    if(!hydrated) return <div></div>;
+
     return (
         <div className={"flex flex-col gap-3 justify-center items-center"}>
             <div
