@@ -3,9 +3,15 @@ import Image from "next/image";
 import bigbot from "../../public/assets/hero/big-bot.webp";
 import smallbot from "../../public/assets/hero/small-bot.webp";
 import Statistics from "./Statistics";
+import { Database } from "@/lib/database.types";
 
 
-export default function HeroBot() {
+
+interface IHeroProps {
+    clubInfo: Database["public"]["Tables"]["club_info"]["Row"];
+}
+
+export default function HeroBot({clubInfo}: IHeroProps) {
 
         const memsIcon =(<svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" fill="none">
         <path d="M9.1875 16.5C9.1875 16.5 7.875 16.5 7.875 15.1667C7.875 13.8333 9.1875 9.83333 14.4375 9.83333C19.6875 9.83333 21 13.8333 21 15.1667C21 16.5 19.6875 16.5 19.6875 16.5H9.1875ZM14.4375 8.5C15.4818 8.5 16.4833 8.07857 17.2217 7.32843C17.9602 6.57828 18.375 5.56087 18.375 4.5C18.375 3.43913 17.9602 2.42172 17.2217 1.67157C16.4833 0.921427 15.4818 0.5 14.4375 0.5C13.3932 0.5 12.3917 0.921427 11.6533 1.67157C10.9148 2.42172 10.5 3.43913 10.5 4.5C10.5 5.56087 10.9148 6.57828 11.6533 7.32843C12.3917 8.07857 13.3932 8.5 14.4375 8.5ZM6.846 16.5C6.65143 16.0838 6.55439 15.6274 6.5625 15.1667C6.5625 13.36 7.455 11.5 9.1035 10.2067C8.28068 9.94911 7.42343 9.82316 6.5625 9.83333C1.3125 9.83333 0 13.8333 0 15.1667C0 16.5 1.3125 16.5 1.3125 16.5H6.846ZM5.90625 8.5C6.77649 8.5 7.61109 8.14881 8.22644 7.52369C8.8418 6.89857 9.1875 6.05072 9.1875 5.16667C9.1875 4.28261 8.8418 3.43477 8.22644 2.80964C7.61109 2.18452 6.77649 1.83333 5.90625 1.83333C5.03601 1.83333 4.20141 2.18452 3.58606 2.80964C2.9707 3.43477 2.625 4.28261 2.625 5.16667C2.625 6.05072 2.9707 6.89857 3.58606 7.52369C4.20141 8.14881 5.03601 8.5 5.90625 8.5Z" fill="white"/>
@@ -32,15 +38,15 @@ export default function HeroBot() {
         return   <div className="hero-bot h-[300px] w-[100%] md:ml-4 lg:mr-3 md:w-[90%] md:h-[400px] md:max-w  relative lg:w-[60%]">
 
         <div className="stat-componenet top-[0%] left-[13%] sm:w-[35%]  md:left-[-3%] w-fit md:w-[50%] absolute">
-        <Statistics text="181 Members" icon={memsIcon} detail="" direction={20}></Statistics>
+        <Statistics text={`${clubInfo.num_members} Members`} icon={memsIcon} detail="" direction={20}></Statistics>
         </div>
 
         <div className="stat-componenet top-[35%] left-[10%] sm:w-[25%]  md:left-[-7%]  lg:left-[-2%] w-fit md:w-[48%] absolute">
-        <Statistics text="3 Projects" icon={projectIcon} detail="" direction={-15}></Statistics>
+        <Statistics text={`${clubInfo.num_projects} Projects`} icon={projectIcon} detail="" direction={-15}></Statistics>
         </div>
 
         <div className="stat-componenet top-[89%] left-[1%] lg:top-[92%]  md:left-[-15%] w-fit md:w-[62%] absolute">
-        <Statistics text="426 Participants in external events" icon={partIcon} detail="" direction={-20}></Statistics>
+        <Statistics text={`${clubInfo.num_participants} Participants in events`} icon={partIcon} detail="" direction={-20}></Statistics>
         </div>
 
         <motion.div 
@@ -70,11 +76,11 @@ export default function HeroBot() {
         </motion.div>
 
         <div className="stat-componenet top-[75%] sm:top-[40%] sm:left-[80%] md:top-[75%] lg:top-[95%] left-[70%]  md:left-[60%] lg:left-[63%] w-fit md:w-[35%] absolute">
-        <Statistics text="11 Events" icon={eventsIcon} detail="8 External ones" direction={-20}></Statistics>
+        <Statistics text={`${clubInfo.num_events} Events`} icon={eventsIcon} detail="8 External ones" direction={-20}></Statistics>
         </div>
 
         <div className="stat-componenet top-[55%] left-[6%]  md:left-[-10%] lg:left-[-3%] w-fit sm:w-[25%] md:w-[35%] absolute">
-        <Statistics text="3 Stands" icon={standIcon} detail="" direction={20}></Statistics>
+        <Statistics text={`${clubInfo.num_stands} Stands`} icon={standIcon} detail="" direction={20}></Statistics>
         </div>
         </div>
 

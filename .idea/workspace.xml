@@ -7,11 +7,6 @@
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.Desc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.Desc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBar/Navbar.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar/Navbar.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "salah/fixes",
+    "git-widget-placeholder": "salah/linking-and-fixes",
     "last_opened_file_path": "/home/froggy/git-clones/ETC-Website-Dashboard",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -63,6 +58,7 @@
       <workItem from="1695249317011" duration="1321000" />
       <workItem from="1695258957573" duration="3840000" />
       <workItem from="1695417857219" duration="7726000" />
+      <workItem from="1696019868939" duration="12029000" />
     </task>
     <servers />
   </component>

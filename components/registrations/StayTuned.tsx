@@ -1,9 +1,8 @@
-"use client"
 import RegistrationTitle from "@/components/registrations/RegistrationTitle";
-import CountdownCard from "@/components/registrations/CountdownCard";
-import { useEffect, useState } from "react";
 import bot1P from "@/public/assets/registration/Bot1P.svg";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import CountdownCard from "@/components/registrations/CountdownCard";
 
 
 interface IStayTunedProps {
@@ -17,12 +16,11 @@ interface IStayTunedProps {
 const Colon = () => {
     return <div className={"font-montserrat font-bold text-2xl md:text-6xl mb-10 text-[#01ecc9]"}>
         :
-    </div>
-}
+    </div>;
+};
 
 
-export default function StayTuned({days, hours, seconds, minutes}: IStayTunedProps) {
-
+export default function StayTuned({ days, hours, seconds, minutes }: IStayTunedProps) {
 
 
     return (
@@ -50,5 +48,5 @@ export default function StayTuned({days, hours, seconds, minutes}: IStayTunedPro
                 Dont miss our open day. A lot fun is waiting for you.
             </p>
         </div>
-    )
+    );
 }
