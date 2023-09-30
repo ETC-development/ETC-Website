@@ -7,24 +7,20 @@ import Projects from "@/components/Projects/Projects.index";
 import Team from "@/components/Team/Team.index";
 import Background from "@/components/background/Background";
 import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
-import { Database } from "@/lib/database.types";
+import supabase from "@/supabase";
 
 export default async function Home() {
 
-    const supabase = createServerComponentClient<Database>({ cookies })
 
-    const {data: clubInfoData, error: infoError} = await supabase.from("club_info").select("*").single();
+    const { data: clubInfoData, error: infoError } = await supabase.from("club_info").select("*").single();
 
-    const {data: projects, error: projectsError} = await supabase.from("projects").select("*")
+    const { data: projects, error: projectsError } = await supabase.from("projects").select("*");
 
-    const {data: teamMembers, error: teamError} = await supabase.from("managers").select("*")
+    const { data: teamMembers, error: teamError } = await supabase.from("managers").select("*");
 
 
     if (infoError || projectsError || teamError)
-        return
-
+        return;
 
 
     return (

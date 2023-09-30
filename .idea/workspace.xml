@@ -6,23 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/registrations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/registrations/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer/Footer.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer/Footer.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.Bot.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.Bot.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.Desc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.Desc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsletter/Newsletter.forground.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsletter/Newsletter.forground.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsletter/Newsletter.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsletter/Newsletter.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Projects/Projects.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects/Projects.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/Team.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/Team.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/TeamCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/TeamCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registrations/CountdownCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/CountdownCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registrations/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/RegistrationMain.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registrations/StayTuned.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/StayTuned.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +58,7 @@
       <workItem from="1695249317011" duration="1321000" />
       <workItem from="1695258957573" duration="3840000" />
       <workItem from="1695417857219" duration="7726000" />
-      <workItem from="1696019868939" duration="11108000" />
+      <workItem from="1696019868939" duration="12029000" />
     </task>
     <servers />
   </component>

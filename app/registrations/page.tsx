@@ -1,15 +1,11 @@
 import RegistrationMain from "@/components/registrations/RegistrationMain";
 import "../../components/registrations/registration.css";
 import Footer from "@/components/Footer/Footer.index";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { Database } from "@/lib/database.types";
-import { cookies } from "next/headers";
 import Background from "@/components/background/Background";
+import supabase from "@/supabase";
 
 export default async function registrationPages() {
 
-
-    const supabase = createServerComponentClient<Database>({ cookies });
 
     const { data: clubInfoData, error: infoError } = await supabase.from("club_info").select("*").single();
 
