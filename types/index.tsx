@@ -1,8 +1,8 @@
 import {ArrowProps} from "react-multi-carousel/lib/types";
+import { Database } from "@/lib/database.types";
 
 export interface CarouselCardProps {
-    CardHoverBackground: any;
-    cardImage: any;  
+    cardImage: any;
     cardDescription: string;
     cardTitle: string;
     cardCaption: string;
@@ -23,6 +23,6 @@ export interface CarouselArrowProps extends ArrowProps {
 
 export interface CarouselSectionProps {
     sectionTitle: string;
-    sectionData: CarouselCardProps[];
     isTopDisplayedOnRight: boolean;
+    items: Database["public"]["Tables"]["projects"]["Row"][] | Database["public"]["Tables"]["events"]["Row"][]
 }

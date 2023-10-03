@@ -23,12 +23,14 @@ SwiperCore.use([Navigation, Scrollbar, A11y, EffectFade]);
 
 const CarouselSection = ({
     sectionTitle,
-    sectionData,
     isTopDisplayedOnRight,
+    items
 }: CarouselSectionProps) => {
-    const [highlightedCard, setHighlightedCard] = useState(1);
+    const [highlightedCard, setHighlightedCard] = useState(0);
     const [firstSwiper, setFirstSwiper] = useState<SwiperCore>();
     const [secondSwiper, setSecondSwiper] = useState<SwiperCore>();
+
+
 
     return (
         <div className=" w-full bg-center overflow-hidden relative " id={sectionTitle}>
@@ -56,7 +58,7 @@ const CarouselSection = ({
                             onSwiper={setFirstSwiper}
                             controller={{ control: secondSwiper }}
                             spaceBetween={30}
-                            initialSlide={1}
+                            initialSlide={highlightedCard}
                             effect="fade"
                             className="w-[80%] md:w-full"
                             fadeEffect={{
@@ -64,12 +66,15 @@ const CarouselSection = ({
                             }}
                             autoHeight={true}
                         >
-                            {sectionData.map((data, index) => (
-                                <SwiperSlide key={data.cardTitle} className="">
+                            {items.map((data, index) => (
+                                <SwiperSlide key={data.title} className="">
                                     <CarouselCard
-                                        key={data.cardTitle}
+                                        key={data.title}
                                         isHighlighted={highlightedCard === index}
-                                        {...data}
+                                        cardTitle={data.title}
+                                        cardImage={data.logo_link}
+                                        cardCaption={data.subtitle || ""}
+                                        cardDescription={data.description}
                                     />
                                 </SwiperSlide>
                             ))}
@@ -101,10 +106,10 @@ const CarouselSection = ({
 
                     <div className="flex flex-col items-center justify-center mt-[25px] lg:basis-[50%]">
                         <h1 className="font-[400] font-azonix text-transparent lg:text-[40px] text-[24px] bg-clip-text bg-gradient-to-r from-[#00F186] to-[#12D3F1C4]">
-                            {sectionData[highlightedCard].cardTitle}
+                            {items[highlightedCard].title}
                         </h1>
                         <p className="text-white text-center lg:text-[18px] lg:max-w-[250px] font-montserrat text-[16px] mt-[10px] font-[400]">
-                            {sectionData[highlightedCard].cardCaption}
+                            {items[highlightedCard].subtitle}
                         </p>
                     </div>
                 </div>
@@ -130,12 +135,13 @@ const CarouselSection = ({
                             {" "}
                             <div></div>{" "}
                         </SwiperSlide>
-                        {sectionData.map((data, index) => (
-                            <SwiperSlide key={data.cardTitle}>
+                        {items.map((data, index) => (
+                            <SwiperSlide key={data.title}>
                                 <CarouselCardMinimized
-                                    key={data.cardTitle}
+                                    key={data.id}
                                     isHighlighted={highlightedCard === index}
-                                    {...data}
+                                    cardTitle={data.title}
+                                    cardImage={data.logo_link}
                                     handleClick={() => {
                                         setHighlightedCard(index);
                                         setSecondSwiper((e) => {

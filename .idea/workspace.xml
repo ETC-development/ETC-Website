@@ -7,6 +7,16 @@
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Carousel/CarouselCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel/CarouselCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Carousel/CarouselCardMinimized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel/CarouselCardMinimized.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Carousel/CarouselSection.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel/CarouselSection.index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Events/Events.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Events/Events.index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Projects/Projects.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects/Projects.index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Team/ManagerContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/ManagerContact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Team/TeamCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/TeamCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Team/team.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/team.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,23 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "salah/linking-and-fixes",
-    "last_opened_file_path": "/home/froggy/git-clones/ETC-Website-Dashboard",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/home/froggy/git-clones/ETC-Website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;salah/linking-and-fixes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/froggy/git-clones/ETC-Website-Dashboard&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/froggy/git-clones/ETC-Website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +68,9 @@
       <workItem from="1695249317011" duration="1321000" />
       <workItem from="1695258957573" duration="3840000" />
       <workItem from="1695417857219" duration="7726000" />
-      <workItem from="1696019868939" duration="12029000" />
+      <workItem from="1696019868939" duration="13565000" />
+      <workItem from="1696165912269" duration="607000" />
+      <workItem from="1696369442768" duration="5192000" />
     </task>
     <servers />
   </component>
