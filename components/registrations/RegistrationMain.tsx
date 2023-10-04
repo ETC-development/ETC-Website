@@ -16,7 +16,7 @@ interface ITimeLeft {
 }
 
 
-const openDayDate = new Date(Date.UTC(2023, 9, 7));
+const openDayDate = new Date(Date.UTC(2023, 9, 14, 14));
 
 
 const calculateTimeLeft = (date: any): ITimeLeft | {} => {

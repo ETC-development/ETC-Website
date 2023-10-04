@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Carousel/CarouselCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel/CarouselCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Carousel/CarouselCardMinimized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel/CarouselCardMinimized.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Carousel/CarouselSection.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel/CarouselSection.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Events/Events.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Events/Events.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Projects/Projects.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects/Projects.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/ManagerContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/ManagerContact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/TeamCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/TeamCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/team.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/team.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/database.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +57,7 @@
       <workItem from="1695417857219" duration="7726000" />
       <workItem from="1696019868939" duration="13565000" />
       <workItem from="1696165912269" duration="607000" />
-      <workItem from="1696369442768" duration="5192000" />
+      <workItem from="1696369442768" duration="5880000" />
     </task>
     <servers />
   </component>

@@ -33,7 +33,7 @@ export default function StayTuned({ days, hours, seconds, minutes }: IStayTunedP
             >
             </Image>
 
-            <RegistrationTitle title={"STAY TUNED!"} subtitle={"be ready to join a group of sharp minded\npeople"} />
+            <RegistrationTitle title={"STAY TUNED"} subtitle={"ETC-Day, our open day event is coming very soon!"} />
             <div className={"flex justify-center items-center gap-1 md:gap-4"}>
                 <CountdownCard text={days} type={"Days"} />
                 <Colon />
@@ -44,8 +44,8 @@ export default function StayTuned({ days, hours, seconds, minutes }: IStayTunedP
                 <CountdownCard text={seconds} type={"Seconds"} />
             </div>
 
-            <p className=" text-white text-center font-montserrat text-[15px] lg:text-[20px] max-w-xs font-semibold">
-                Dont miss our open day. A lot fun is waiting for you.
+            <p className="text-white text-center font-montserrat text-[15px] lg:text-[20px] max-w-xs font-semibold">
+                Be ready to join a group of sharp minded people
             </p>
         </div>
     );
