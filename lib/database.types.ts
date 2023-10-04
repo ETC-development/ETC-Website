@@ -98,25 +98,25 @@ export interface Database {
       }
       events: {
         Row: {
-          event_desc: string
-          event_logo_link: string
-          event_subtitle: string | null
-          event_title: string
+          description: string
           id: number
+          logo_link: string
+          subtitle: string | null
+          title: string
         }
         Insert: {
-          event_desc: string
-          event_logo_link: string
-          event_subtitle?: string | null
-          event_title: string
+          description: string
           id?: number
+          logo_link: string
+          subtitle?: string | null
+          title: string
         }
         Update: {
-          event_desc?: string
-          event_logo_link?: string
-          event_subtitle?: string | null
-          event_title?: string
+          description?: string
           id?: number
+          logo_link?: string
+          subtitle?: string | null
+          title?: string
         }
         Relationships: []
       }
@@ -158,25 +158,25 @@ export interface Database {
       }
       projects: {
         Row: {
+          description: string
           id: number
-          project_desc: string
-          project_logo_link: string
-          project_subtitle: string | null
-          project_title: string
+          logo_link: string
+          subtitle: string | null
+          title: string
         }
         Insert: {
+          description: string
           id?: number
-          project_desc: string
-          project_logo_link: string
-          project_subtitle?: string | null
-          project_title: string
+          logo_link: string
+          subtitle?: string | null
+          title: string
         }
         Update: {
+          description?: string
           id?: number
-          project_desc?: string
-          project_logo_link?: string
-          project_subtitle?: string | null
-          project_title?: string
+          logo_link?: string
+          subtitle?: string | null
+          title?: string
         }
         Relationships: []
       }

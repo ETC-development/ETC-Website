@@ -16,10 +16,12 @@ export default async function Home() {
 
     const { data: projects, error: projectsError } = await supabase.from("projects").select("*");
 
+    const { data: events, error: eventsError } = await supabase.from("events").select("*");
+
     const { data: teamMembers, error: teamError } = await supabase.from("managers").select("*");
 
 
-    if (infoError || projectsError || teamError)
+    if (infoError || projectsError || teamError || eventsError)
         return;
 
 
@@ -33,7 +35,7 @@ export default async function Home() {
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
-                <Events />
+                <Events events={events} />
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>

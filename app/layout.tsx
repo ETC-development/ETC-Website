@@ -38,13 +38,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+      <html lang="en">
       <body className={`${azonix.variable} ${montserrat.variable} ${comfortaa.variable}`}>{children}</body>
-    </html>
+      </html>
   );
 }
