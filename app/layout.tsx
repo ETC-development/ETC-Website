@@ -1,16 +1,14 @@
-
 import "./globals.css";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { config } from '@fortawesome/fontawesome-svg-core' // 👈
-import '@fortawesome/fontawesome-svg-core/styles.css' // 👈
-config.autoAddCss = false // 👈
-
-
+import "swiper/css";
+import "swiper/css/navigation";
+import { config } from "@fortawesome/fontawesome-svg-core"; // 👈
+import "@fortawesome/fontawesome-svg-core/styles.css"; // 👈
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Comfortaa, Montserrat } from "next/font/google";
+
+config.autoAddCss = false // 👈
 
 const azonix = localFont({
   src: [

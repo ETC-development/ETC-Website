@@ -1,7 +1,6 @@
 "use client";
 
 import CarouselSection from "../Carousel/CarouselSection.index";
-import { EventCardsData } from "@/constants";
 import { Database } from "@/lib/database.types";
 
 
