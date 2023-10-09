@@ -9,14 +9,8 @@ import "./hero.css";
 import HeroBot from "./Hero.Bot";
 import HeroDesc from "./Hero.Desc";
 import { useRouter } from "next/navigation";
-import { Database } from "@/lib/database.types";
 
-
-interface IHeroProps {
-    clubInfo: Database["public"]["Tables"]["club_info"]["Row"];
-}
-
-export default function Hero({clubInfo}: IHeroProps) {
+export default function Hero() {
 
 
     const router = useRouter();
@@ -44,9 +38,9 @@ export default function Hero({clubInfo}: IHeroProps) {
                         <div className="image-tech w-[800px] md:w-[600px] lg:w-[800px] bottom-0 rotate-90 md:rotate-0 sm:right-0 absolute">
                             <Image className="tech" src={tech} alt=""></Image>
                         </div>
-                        <HeroDesc clubInfo={clubInfo} onRegBtnClick={gotoRegPage}></HeroDesc>
+                        <HeroDesc onRegBtnClick={gotoRegPage}></HeroDesc>
 
-                        <HeroBot clubInfo={clubInfo}/>
+                        <HeroBot></HeroBot>
                     </div>
                 </div>
             </div>

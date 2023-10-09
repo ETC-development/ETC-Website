@@ -14,8 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-tailwind/react": "^2.1.0",
-    "@supabase/auth-helpers-nextjs": "^0.8.1",
-    "@supabase/supabase-js": "^2.37.0",
+    "@supabase/supabase-js": "^2.36.0",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
@@ -31,10 +30,10 @@
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.4",
     "react-simple-typewriter": "^5.0.1",
-    "swiper": "^10.2.0",
+    "swiper": "^10.3.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6",
-    "typewriter-effect": "^2.20.1"
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "prettier": "^3.0.2"

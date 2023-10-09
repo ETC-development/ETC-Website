@@ -12,25 +12,64 @@ import "swiper/css/navigation";
 
 import { EffectCoverflow, Navigation, Controller} from "swiper/modules";
 import TeamCard from "./TeamCard";
-import { Database } from "@/lib/database.types";
-
-
-interface ITeamMembers {
-    teamMembers: Database["public"]["Tables"]["managers"]["Row"][];
-}
-
 
 SwiperCore.use([EffectCoverflow, Navigation]);
-export default function Team({teamMembers}: ITeamMembers) {
+export default function Team() {
     const handleChange = () => {
         const slide = document.getElementById("slide");
         slide?.classList.add("fade");
     };
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
-
-    const activeManager = teamMembers[activeSlideIndex];
-    const [thirdSwiper, setThirdSwiper] = useState<SwiperCore>();
+    const managers = [
+        {
+            name: "Salah Eddine Makdour",
+            position: "President",
+            talent: "Backend & FrontEnd Developer",
+            year: "3rd year student at ENSIA",
+            desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.",
+            email: "Salah Eddine Makdour",
+            img: "/salah.jpeg",
+        },
+        {
+            name: "Nesrine Abdelhak",
+            position: "HR Manager",
+            talent: "Backend & FrontEnd Developer",
+            year: "3rd year student at ENSIA",
+            desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.",
+            email: "Salah Eddine Makdour",
+            img: "/nesrine.jpeg",
+        },
+        {
+            name: "Selma Mani",
+            position: "Communication Manager",
+            talent: "Backend & FrontEnd Developer",
+            year: "3rd year student at ENSIA",
+            desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.",
+            email: "Salah Eddine Makdour",
+            img: "./selma.jpg",
+        },
+        {
+            name: "Lyes Hajar",
+            position: "Design Manager",
+            talent: "UI/UX Designer",
+            year: "2nd year student at ENSIA",
+            desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.",
+            email: "Salah Eddine Makdour",
+            img: "/ilyes.png",
+        },
+        {
+            name: "Hamza dia",
+            position: "Marketing Manager",
+            talent: "Backend & FrontEnd Developer",
+            year: "2nd year student at ENSIA",
+            desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.",
+            email: "Salah Eddine Makdour",
+            img: "/hamza.jpeg",
+        },
+    ];
+    const activeManager = managers[activeSlideIndex];
+    const [thirdSwiper, setThirsSwiper] = useState<SwiperCore>();
 
     return (
         <div className="justify-center w-screen py-9 flex flex-col items-center  gap-12 relative" id="Team">
@@ -43,10 +82,10 @@ export default function Team({teamMembers}: ITeamMembers) {
                     <div className="team-bg border w-[250px] h-[250px] right-0 left-0 m-auto rounded-full md:w-[435px] md:h-[435px] opacity-80 bg-[#00B1E5] blur-[250px] absolute"></div>
                     <Swiper
                         modules={[Controller]}
-                        onSwiper={setThirdSwiper}
+                        onSwiper={setThirsSwiper}
                         controller={{ control: thirdSwiper }}
                         onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
-                        initialSlide={5}
+                        initialSlide={2}
                         effect={"coverflow"}
                         grabCursor={true}
                         centeredSlides={true}
@@ -65,20 +104,13 @@ export default function Team({teamMembers}: ITeamMembers) {
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                         }}
-                        className="swiper_container w-full md:w-[60%] md:!m-0  "
+                        className="swiper_container w-full md:w-[80%] md:!m-0  "
                     >
-                        {teamMembers.map(({email, education_level, fullname, github_link, linkedin_link, profile_pic_url, role, manager_id, description}, index) => (
-                            <SwiperSlide className="!w-auto swiper-slide-team" key={manager_id}>
+                        {managers.map((content, index) => (
+                            <SwiperSlide className="!w-auto swiper-slide-team" key={index}>
                                 <TeamCard
                                     // isActive={index === activeSlideIndex}
-                                    name={fullname}
-                                    email={email}
-                                    desc={description}
-                                    img={profile_pic_url}
-                                    position={role}
-                                    year={education_level}
-                                    github={github_link}
-                                    linkedin={linkedin_link}
+                                    {...content}
                                 />
                             </SwiperSlide>
                         ))}
@@ -100,12 +132,12 @@ export default function Team({teamMembers}: ITeamMembers) {
                     onChange={handleChange}
                 >
                     <p className="text-center font-azonix md:text-[35px] font-normal manager_title ">
-                        {activeManager.role}
+                        {activeManager.position}
                     </p>
-                    <p className="text-white text-[28px] font-montserrat ">{activeManager.fullname}</p>
+                    <p className="text-white text-[28px] font-montserrat ">{activeManager.name}</p>
                     <div className="flex flex-col text-[14px] text-gray-300 font-montserrat">
-                       {/*<div> {activeManager.talent}</div>*/}
-                       <div> {activeManager.education_level}</div>
+                       <div> {activeManager.talent}</div>
+                       <div> {activeManager.year}</div>
                     </div>
                 </div>
             </div>
