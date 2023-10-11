@@ -1,11 +1,24 @@
-import RegistrationMain from "@/components/registrations/RegistrationMain";
+import Main from "@/components/registrations/Main";
 import "../../components/registrations/registration.css";
 import Footer from "@/components/Footer/Footer.index";
-import Background from "@/components/background/Background";
-import supabase from "@/supabase";
+import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
+import AuthProvider, { AuthContext } from "@/components/auth/AuthProvider";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+
+
+export const revalidate = 0;
 
 export default async function registrationPages() {
 
+
+    const supabase = createServerComponentClient({ cookies });
+
+    const {
+        data: { session }
+    } = await supabase.auth.getSession();
+
+    const accessToken = session?.access_token || null;
 
     const { data: clubInfoData, error: infoError } = await supabase.from("club_info").select("*").single();
 
@@ -13,43 +26,16 @@ export default async function registrationPages() {
         return;
 
 
-    // const supabase = createClientComponentClient<Database>()
-    //
-    //
-    // const [clubInfo, setClubInfo] = useState<Database["public"]["Tables"]["club_info"]["Row"]>()
-    //
-
-    // const [hydrated, setHydrated] = useState(false);
-    // useEffect(() => {
-    //     setHydrated(true);
-    //     const fetchClubInfo = async () => {
-    //         const {data: clubInfoData, error: infoError} = await supabase.from("club_info").select("*").single();
-    //
-    //         if(clubInfoData){
-    //             setClubInfo(clubInfoData)
-    //         }
-    //     }
-    //
-    //
-    // }, []);
-    //
-
-    // if (!hydrated) {
-    //     // Returns null on first render, so the client and server match
-    //     return null;
-    // }
-    //
-
-
     return (
-        // <div className={"bgGradientPage"}>
-        <>
-            <Background />
-            <div className="flex items-center justify-center py-6 lg:py-20">
-                <RegistrationMain />
+        <AuthProvider accessToken={accessToken}>
+            <div className={"bgGradientPage"}>
+                <div className="flex items-center justify-center py-6 lg:py-20">
+                    <Main />
+                </div>
+                <FadeInWhenVisible>
+                    <Footer clubInfo={clubInfoData}/>
+                </FadeInWhenVisible>
             </div>
-            <Footer clubInfo={clubInfoData} />
-        </>
-        // </div>
+        </AuthProvider>
     );
 }

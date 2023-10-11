@@ -16,7 +16,7 @@ interface ITimeLeft {
 }
 
 
-const openDayDate = new Date(Date.UTC(2023, 9, 14, 14));
+const openDayDate = new Date(Date.UTC(2023, 9, 7));
 
 
 const calculateTimeLeft = (date: any): ITimeLeft | {} => {
@@ -37,7 +37,7 @@ const calculateTimeLeft = (date: any): ITimeLeft | {} => {
 };
 
 
-export default function RegistrationMain() {
+export default function Main() {
 
 
     const [timeLeft, setTimeLeft] = useState<ITimeLeft | {}>(calculateTimeLeft(openDayDate));
@@ -49,8 +49,8 @@ export default function RegistrationMain() {
     });
 
     return (
-        <form
-            className="flex backdrop-blur-lg py-14 lg:pt-24 px-7 gap-10 bg-[#00282A] flex-col w-[90%] lg:w-[80%] rounded-3xl z-10 relative">
+        <div 
+            className="flex py-14 lg:pt-24 px-7 gap-10 bg-[#00282A] flex-col w-[90%] lg:w-[80%] rounded-3xl z-10 relative">
             <Link
                 href="/"
             >
@@ -61,10 +61,10 @@ export default function RegistrationMain() {
                 >
                 </Image>
             </Link>
-
-            {Object.keys(timeLeft).length === 0 ? <RegistrationForm /> :
+            <RegistrationForm />
+            {/* {Object.keys(timeLeft).length === 0 ? <RegistrationForm /> :
                 <StayTuned days={(timeLeft as ITimeLeft).days} seconds={(timeLeft as ITimeLeft).seconds}
-                           minutes={(timeLeft as ITimeLeft).minutes} hours={(timeLeft as ITimeLeft).hours} />}
-        </form>
+                           minutes={(timeLeft as ITimeLeft).minutes} hours={(timeLeft as ITimeLeft).hours} />} */}
+        </div>
     );
 }
