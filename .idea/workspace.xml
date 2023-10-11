@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/auth/callback/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/auth/AuthProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/registrations/discord.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/registrations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/registrations/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/Applicant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/Applicant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/RegForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/RegForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/functions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/functions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/validation.fun.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/validation.fun.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +44,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;salah/linking-and-fixes&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/froggy/git-clones/ETC-Website-Dashboard&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;selma/form&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/froggy/Desktop/university/celec/JunctionX/challenge2/fleet-management-system&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -60,10 +73,21 @@
       <workItem from="1696019868939" duration="13565000" />
       <workItem from="1696165912269" duration="607000" />
       <workItem from="1696369442768" duration="7097000" />
+      <workItem from="1696420332841" duration="750000" />
+      <workItem from="1696526385035" duration="91000" />
+      <workItem from="1696885924112" duration="1656000" />
+      <workItem from="1696948301207" duration="3989000" />
+      <workItem from="1696967424579" duration="4794000" />
+      <workItem from="1696973167745" duration="9190000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/supabase.js" />
+      </list>
+    </option>
   </component>
 </project>
