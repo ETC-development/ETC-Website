@@ -24,13 +24,14 @@ const CarouselCard = ({
                 />
             </div>
             <div className="absolute inset-0 py-[30px] h-full w-full">
-                <div className=" mx-auto items-center px-[0px] flex flex-col ">
-                    <div className="relative">
+                <div className=" mx-auto justify-between items-center px-[0px] flex flex-col ">
+                    <div className="relative h-1/4 w-1/2">
                         {cardImage ? (
+
                             <img
                                 alt="logo"
                                 src={cardImage}
-                                className={"w-44"}
+                                className={"h-full"}
                                 // layout="fill"
                                 // objectFit="contain"
                             />
