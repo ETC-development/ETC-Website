@@ -5,12 +5,13 @@ import { IResponseMessage } from "./Newsletter.forground";
 interface INewsLetterHandler {
     setIsLoading: Dispatch<SetStateAction<boolean>>;
     setMessage: Dispatch<SetStateAction<IResponseMessage>>;
+    setEmail: Dispatch<SetStateAction<string>>;
 
     email: String;
 }
 
 const handleSubmit =
-    ({ email, setIsLoading, setMessage }: INewsLetterHandler) =>
+    ({ email, setEmail, setIsLoading, setMessage }: INewsLetterHandler) =>
     async (event: FormEvent) => {
         event.preventDefault();
 
@@ -36,9 +37,13 @@ const handleSubmit =
             ];
 
             const results = await Promise.all(requests);
-            console.log("results", results);
+
+            results.forEach((res) => {
+                if (res.status !== 200) throw Error("Request Failed");
+            });
 
             setMessage({ status: "success", text: "An e-mail has been sent" });
+            setEmail("");
         } catch (e) {
             console.log(e);
             setMessage({ status: "error", text: "Failed to send e-mail" });

@@ -57,23 +57,26 @@ export default function NewsletterForground({ clubInfo }: INewsletterProps) {
                         type={"email"}
                         name={"newsletter_email"}
                         id={"newsletter_email"}
+                        value={email}
                         setInputValue={setEmail}
                     />
                     <NewsLetterButton
                         isLoading={isLoading}
                         onSubmit={handleSubmit({
                             email: email,
+                            setEmail: setEmail,
                             setIsLoading: setIsLoading,
                             setMessage,
                         })}
                     />
                     <div
-                        className={  message.status === "error"
-                        ? "text-red"
-                        : message.status === "success"
-                        ? "text-[#00FF00]"
-                        : "text-[white]"
-                }
+                        className={
+                            message.status === "error"
+                                ? "bg-[red] p-3 rounded-xl bg-opacity-25 backdrop-blur-sm text-[red]"
+                                : message.status === "success"
+                                ? "bg-[#00FF00] rounded-xl p-3 bg-opacity-25 backdrop-blur-sm text-[#00FF00]"
+                                : "bg-[white] p-3 rounded-xl bg-opacity-25 backdrop-blur-sm text-[white]"
+                        }
                     >
                         {message.text}
                     </div>
