@@ -8,11 +8,12 @@ export default function Background() {
 
     const rotate = useTransform(scrollY, [0, 6000], [0, 360], { clamp: false });
     const scale = useTransform(scrollY, [0, 1000], [1, 1.2], { clamp: false });
+    const opacity = useTransform(scrollY, [0, 1000], [1, 0.6], { clamp: false });
 
     return (
         <motion.div
             className="hero-gradient overflow-x-hidden overflow-y-visible fixed blur-xl"
-            style={{ rotate, scale }}
+            style={{ rotate, scale, opacity }}
         >
             <Image width={5920} src={heroGradient} alt="gradient" />
         </motion.div>

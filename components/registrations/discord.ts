@@ -1,8 +1,6 @@
-import supabase from "@/supabase";
-import { redirect } from "next/dist/server/api-utils";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@/lib/database.types";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 
 export async function signOutFromDiscord(router: AppRouterInstance) {

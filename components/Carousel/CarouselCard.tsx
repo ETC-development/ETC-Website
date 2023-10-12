@@ -24,28 +24,31 @@ const CarouselCard = ({
                 />
             </div>
             <div className="absolute inset-0 py-[30px] h-full w-full">
-                <div className=" mx-auto justify-between items-center px-[0px] flex flex-col ">
-                    <div className="relative h-1/4 w-1/2">
+                <div className=" mx-auto items-center px-[0px] flex flex-col h-full">
+                    <div className="relative h-2/4 md:h-2/4 w-3/4 flex justify-center">
                         {cardImage ? (
-
-                            <img
+                            <Image
                                 alt="logo"
                                 src={cardImage}
-                                className={"h-full"}
-                                // layout="fill"
-                                // objectFit="contain"
+                                className={"left-0 right-0"}
+                                // width={30}
+                                // height={30}
+                                objectFit="contain"
+                                fill
                             />
                         ) : (
                             <div
-                                className="w-full h-full rounded-[20px] py-[20px] px-[20px] text-2xl md:text-3xl flex items-center justify-center font-azonix ">
+                                className="w-full h-full rounded-[20px] py-[20px] px-[20px] text-2xl md:text-5xl flex items-center justify-center text-center font-azonix ">
                                 {cardTitle}
                             </div>
                         )}
                     </div>
 
-                    <p className="font-montserrat text-md px-[10px] lg:leading-[24px] leading-[13px] text-white mt-[20px] text-center md:text-xl ">
-                        {cardDescription}
-                    </p>
+                    <div className={"flex h-3/4 items-center justify-center"}>
+                        <p className="font-montserrat text-md px-[10px] lg:leading-[24px] leading-[13px] text-white text-center md:text-xl ">
+                            {cardDescription}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
