@@ -1,8 +1,9 @@
+"use client"
 import RegistrationTitle from "@/components/registrations/RegistrationTitle";
+import CountdownCard from "@/components/registrations/CountdownCard";
+import { useEffect, useState } from "react";
 import bot1P from "@/public/assets/registration/Bot1P.svg";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-import CountdownCard from "@/components/registrations/CountdownCard";
 
 
 interface IStayTunedProps {
@@ -16,11 +17,12 @@ interface IStayTunedProps {
 const Colon = () => {
     return <div className={"font-montserrat font-bold text-2xl md:text-6xl mb-10 text-[#01ecc9]"}>
         :
-    </div>;
-};
+    </div>
+}
 
 
-export default function StayTuned({ days, hours, seconds, minutes }: IStayTunedProps) {
+export default function StayTuned({days, hours, seconds, minutes}: IStayTunedProps) {
+
 
 
     return (
@@ -33,7 +35,7 @@ export default function StayTuned({ days, hours, seconds, minutes }: IStayTunedP
             >
             </Image>
 
-            <RegistrationTitle title={"STAY TUNED"} subtitle={"ETC-Day, our open day event is coming very soon!"} />
+            <RegistrationTitle title={"STAY TUNED!"} subtitle={"be ready to join a group of sharp minded\npeople"} />
             <div className={"flex justify-center items-center gap-1 md:gap-4"}>
                 <CountdownCard text={days} type={"Days"} />
                 <Colon />
@@ -44,9 +46,9 @@ export default function StayTuned({ days, hours, seconds, minutes }: IStayTunedP
                 <CountdownCard text={seconds} type={"Seconds"} />
             </div>
 
-            <p className="text-white text-center font-montserrat text-[15px] lg:text-[20px] max-w-xs font-semibold">
-                Be ready to join a group of sharp minded people
+            <p className=" text-white text-center font-montserrat text-[15px] lg:text-[20px] max-w-xs font-semibold">
+                Dont miss our open day. A lot fun is waiting for you.
             </p>
         </div>
-    );
+    )
 }

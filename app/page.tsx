@@ -30,14 +30,17 @@ export default async function Home() {
             <Background />
             <Navbar />
             <Hero clubInfo={clubInfoData} />
-            <FadeInWhenVisible>
-                <Projects projects={projects} />
-            </FadeInWhenVisible>
 
             <FadeInWhenVisible>
                 <Events events={events} />
             </FadeInWhenVisible>
 
+
+            <FadeInWhenVisible>
+                <Projects projects={projects} />
+            </FadeInWhenVisible>
+
+            
             <FadeInWhenVisible>
                 <Team teamMembers={teamMembers} />
             </FadeInWhenVisible>
