@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/apple-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/robots.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sitemap.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/ManagerContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/ManagerContact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/TeamCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/TeamCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +36,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "salah/final-ui-fixes",
-    "last_opened_file_path": "/home/froggy/git-clones/ETC-Website-Dashboard",
+    "git-widget-placeholder": "salah/fix-SEO",
+    "last_opened_file_path": "/home/froggy/git-clones/ETC-Website/app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,9 +66,22 @@
       <workItem from="1696165912269" duration="607000" />
       <workItem from="1696369442768" duration="7097000" />
     </task>
+    <task id="LOCAL-00001" summary="merge PR">
+      <option name="closed" value="true" />
+      <created>1697216426904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697216426904</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge PR" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge PR" />
   </component>
 </project>
