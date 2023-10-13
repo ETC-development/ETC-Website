@@ -6,50 +6,58 @@ interface INewsLetterHandler {
     setIsLoading: Dispatch<SetStateAction<boolean>>;
     setMessage: Dispatch<SetStateAction<IResponseMessage>>;
     setEmail: Dispatch<SetStateAction<string>>;
-
     email: String;
 }
 
 const handleSubmit =
     ({ email, setEmail, setIsLoading, setMessage }: INewsLetterHandler) =>
-    async (event: FormEvent) => {
-        event.preventDefault();
+        async (event: FormEvent) => {
+            event.preventDefault();
 
-        if (email === "") return;
+            setMessage({ status: "none", text: "" });
 
-        setIsLoading(true);
+            if (email === "") return;
 
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                email: email,
-                list_uuids: NewsLetterConfig.LIST_UUIDS,
-            }),
+            setIsLoading(true);
+
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email: email,
+                    list_uuids: NewsLetterConfig.LIST_UUIDS
+                })
+            };
+
+            try {
+                const requests = [
+                    await fetch(NewsLetterConfig.API_URL, options),
+                    await fetch("/api/tx", options)
+                ];
+
+                const results = await Promise.all(requests);
+
+                results.forEach((res) => {
+                    if (res.status !== 200) throw Error("Request Failed");
+                });
+
+
+                setMessage({
+                    status: "success",
+                    text: "Subscribed successfully"
+                });
+                setEmail("");
+            } catch (e) {
+                console.log(e);
+                setMessage({
+                    status: "error",
+                    text: "There was a problem while subscribing to the newsletter, please try again"
+                });
+            }
+
+            setIsLoading(false);
         };
-
-        try {
-            const requests = [
-                await fetch(NewsLetterConfig.API_URL, options),
-                await fetch("/api/tx", options),
-            ];
-
-            const results = await Promise.all(requests);
-
-            results.forEach((res) => {
-                if (res.status !== 200) throw Error("Request Failed");
-            });
-
-            setMessage({ status: "success", text: "An e-mail has been sent" });
-            setEmail("");
-        } catch (e) {
-            console.log(e);
-            setMessage({ status: "error", text: "Failed to send e-mail" });
-        }
-
-        setIsLoading(false);
-    };
 
 export default handleSubmit;

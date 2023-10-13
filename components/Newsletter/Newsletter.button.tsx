@@ -11,7 +11,7 @@ export default function NewsLetterButton({ isLoading, onSubmit }: INewsLetterBut
 
     const spinner = <div className="flex flex-row gap-5"> <div>{Spinner()}</div> Subscribing..</div>
 
-    return <div className="w-[50%] max-w-[300px] mx-auto">
+    return <div className="w-full flex justify-center mx-auto">
         <Button text={isLoading ? spinner : "Subscribe"} onSubmit={onSubmit}/>
     </div>;
 }

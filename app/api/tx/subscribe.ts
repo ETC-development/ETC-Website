@@ -1,5 +1,5 @@
 import { TransactionalEmailConfig } from "@/app/config";
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 
 export const subscribe = async ({ email }: { email: string }) => {
     const body = {
@@ -7,13 +7,13 @@ export const subscribe = async ({ email }: { email: string }) => {
         template_id: TransactionalEmailConfig.TEMPLATE_ID,
     };
 
-    const config = {
+    const config: AxiosRequestConfig= {
         headers: {
             "Content-Type": "application/json; charset=utf-8",
         },
         auth: {
-            username: TransactionalEmailConfig.AUTH.USERNAME,
-            password: TransactionalEmailConfig.AUTH.PASSWORD,
+            username: TransactionalEmailConfig.AUTH.USERNAME || "",
+            password: TransactionalEmailConfig.AUTH.PASSWORD || "",
         },
     };
 
