@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/tx/subscribe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/tx/subscribe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsletter/Newsletter.background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsletter/Newsletter.background.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsletter/Newsletter.button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsletter/Newsletter.button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsletter/Newsletter.forground.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsletter/Newsletter.forground.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsletter/Newsletter.handler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsletter/Newsletter.handler.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
