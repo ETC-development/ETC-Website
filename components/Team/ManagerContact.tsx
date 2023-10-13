@@ -24,17 +24,17 @@ githubLink,
                     <ul className="flex flex-row gap-3 flex-right">
                         <li className='w-full flex items-center lg:flex-row'>
                             <div className="w-10 h-10 rounded-full border-2 border-white flex flex-row justify-center items-center">
-                                <a href={githubLink}><FontAwesomeIcon icon={faGithubAlt} size='lg'  style={{color: "#ffffff"}} /></a>
+                                <a target={"_blank"} href={githubLink}><FontAwesomeIcon icon={faGithubAlt} size='lg'  style={{color: "#ffffff"}} /></a>
                         </div>
                         </li>
                         <li className='flex items-center lg:flex-row'>
                             <div className="w-10 h-10 rounded-full border-2 border-white flex flex-row justify-center items-center">
-                                <a href={`mailto:${emailLink}`}><FontAwesomeIcon icon={faEnvelope} size='lg'  className="text-white" /></a>
+                                <a target={"_blank"} href={`mailto:${emailLink}`}><FontAwesomeIcon icon={faEnvelope} size='lg'  className="text-white" /></a>
                             </div>
                         </li>
                         <li className='w-full flex items-center lg:flex-row'>
                             <div className="w-10 h-10 rounded-full border-2 border-white flex flex-row justify-center items-center">
-                                <a href={linkedinLink}><FontAwesomeIcon icon={faLinkedinIn} size='lg'  className="text-white" /> </a>
+                                <a target={"_blank"} href={linkedinLink}><FontAwesomeIcon icon={faLinkedinIn} size='lg'  className="text-white" /> </a>
                             </div>
                         </li>
                     </ul>
