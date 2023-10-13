@@ -16,7 +16,7 @@ interface ITimeLeft {
 }
 
 
-const openDayDate = new Date(Date.UTC(2023, 9, 7));
+const openDayDate = new Date(Date.UTC(2023, 8, 14, 15));
 
 
 const calculateTimeLeft = (date: any): ITimeLeft | {} => {
@@ -41,12 +41,20 @@ export default function Main() {
 
 
     const [timeLeft, setTimeLeft] = useState<ITimeLeft | {}>(calculateTimeLeft(openDayDate));
+    const [isClient, setIsClient] = useState(false)
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setTimeLeft(calculateTimeLeft(openDayDate));
         }, 1000);
     });
+
+
+    useEffect(() => {
+        setIsClient(true)
+    }, []);
+
+    if(!isClient) return;
 
     return (
         <div 
@@ -61,10 +69,10 @@ export default function Main() {
                 >
                 </Image>
             </Link>
-            <RegistrationForm />
-            {/* {Object.keys(timeLeft).length === 0 ? <RegistrationForm /> :
+            {/*<RegistrationForm />*/}
+            {Object.keys(timeLeft).length === 0 ? <RegistrationForm /> :
                 <StayTuned days={(timeLeft as ITimeLeft).days} seconds={(timeLeft as ITimeLeft).seconds}
-                           minutes={(timeLeft as ITimeLeft).minutes} hours={(timeLeft as ITimeLeft).hours} />} */}
+                           minutes={(timeLeft as ITimeLeft).minutes} hours={(timeLeft as ITimeLeft).hours} />}
         </div>
     );
 }

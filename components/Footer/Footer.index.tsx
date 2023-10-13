@@ -105,6 +105,7 @@ const Footer = ({ clubInfo }: IFooterProps) => {
                         <span className="text-white font-montserrat text-2xl"> by: </span>
                     </div>
                     <Image
+                        className={"w-52 md:w-72"}
                         src={"/etc-logo.webp"}
                         alt="ETC logo"
                         width={271}

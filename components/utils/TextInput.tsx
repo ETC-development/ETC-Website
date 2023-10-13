@@ -16,7 +16,7 @@ export default function TextInput({ placeholder, id, name, type, value, setInput
     };
 
     return (
-        <div className={"relative w-[26rem] max-w-full font-montserrat font-medium"}>
+        <div className={"relative w-[30rem] max-w-full font-montserrat font-medium"}>
             <div className={"btn-ellipse-blur left-0 !blur-xl !w-16 bg-cyan"}></div>
             <div className={"btn-ellipse-blur left-16 !blur-xl !w-16 bg-green"}></div>
             <div className={"btn-ellipse-blur left-36 !blur-xl !w-16 bg-less-dark-green"}></div>

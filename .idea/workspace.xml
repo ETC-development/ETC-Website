@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/robots.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/sitemap.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/RegForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/RegForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/utils/Button1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/utils/Button1.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/utils/TextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/utils/TextInput.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "salah/fix-SEO",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/froggy/git-clones/ETC-Website/app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

@@ -33,7 +33,6 @@ import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 import Button1 from "../utils/Button1";
 
 
-
 SwiperCore.use([Navigation, Pagination]);
 
 
@@ -175,8 +174,8 @@ export default function RegistrationForm() {
             updatedErrors.email = "Please provide a valid @ensia.edu.dz email.";
         }
 
-        if(!user) {
-            updatedErrors.discord = "Please connect your Discord account."
+        if (!user) {
+            updatedErrors.discord = "Please connect your Discord account.";
         }
 
         await checkParagraphs(paragraphs, updatedErrors, applicantInfo);
@@ -203,16 +202,17 @@ export default function RegistrationForm() {
 
     function getDiscordLogoutButton() {
         return <div
-            className={"flex items-center justify-center gap-2 focus:bg-[#074F57] bg-[#093441] z-20  self-stretch flex-1 rounded-xl  font-montserrat text-[#C7C7C7] pl-8 py-3 text-[12px]  lg:text-[16px] "}
+            className={"flex items-center gap-3 justify-center focus:bg-[#074F57] bg-[#093441] z-20  self-stretch flex-1 rounded-xl  font-montserrat text-[#C7C7C7] py-3 text-md "}
         >
-            <Image className={"rounded-full"} src={user?.user_metadata.avatar_url} alt={"profile picture"} width={30}
-                   height={30} />
-            <div className={""}>{user?.user_metadata.full_name || user?.user_metadata.name}</div>
-            <button
-                onClick={() => signOutFromDiscord(router)}
-            >
-                <FontAwesomeIcon icon={faSignOut} />
-            </button>
+                <Image className={"rounded-full"} src={user?.user_metadata.avatar_url} alt={"profile picture"}
+                       width={30}
+                       height={30} />
+                <div className={""}>{user?.user_metadata.full_name || user?.user_metadata.name}</div>
+                <button
+                    onClick={() => signOutFromDiscord(router)}
+                >
+                    <FontAwesomeIcon icon={faSignOut} />
+                </button>
         </div>;
     }
 
@@ -274,7 +274,7 @@ export default function RegistrationForm() {
                             {user ? getDiscordLogoutButton() : getDiscordLoginButton()}
                         </div>
                         {errors.discord && <div className="text-sm text-red-600">{errors.discord}</div>}
-                        <Input id="self_description" placeholder="Tell us more about yourself" type="text"
+                        <Input isTextField={true} id="self_description" placeholder="Tell us more about yourself" type="text"
                                name="self_description" applicant={applicantInfo} value={applicantInfo?.self_description}
                                setInputValue={setApplicantInfo} height="h-[120px]" />
                         {errors.self_description &&
@@ -287,7 +287,7 @@ export default function RegistrationForm() {
                 <Image
                     src={bot2P}
                     alt=""
-                    className=" absolute top-10 right-[-40px] animationReg lg:hidden"
+                    className=" absolute z-20 top-10 right-[-40px] animationReg lg:hidden"
                 >
                 </Image>
                 <Image
@@ -353,7 +353,7 @@ export default function RegistrationForm() {
                         . Please indicate your department preferences
                     </p>
                     <p className=" font-montserrat text-white text-[14px] lg:text-[18px] font-medium text-left ml-4 mt-6">
-                         First choice ? *
+                        First choice ? *
                     </p>
                     <Option id="dep_first_choice" placeholder="First Choice * " name="dep_first_choice"
                             applicant={applicantInfo} value={applicantInfo?.dep_first_choice}
@@ -369,9 +369,9 @@ export default function RegistrationForm() {
                            height="h-auto" />
                     {errors.first_choice_motivation &&
                         <div className="text-sm text-red-600">{errors.first_choice_motivation}</div>}
-                        <hr className="border-t border-gray-300 my-6" />
-                        <p className=" font-montserrat text-white text-[14px] lg:text-[18px] font-medium text-left ml-4">
-                         Second choice ? *
+                    <hr className="border-t border-gray-300 my-6" />
+                    <p className=" font-montserrat text-white text-[14px] lg:text-[18px] font-medium text-left ml-4">
+                        Second choice ? *
                     </p>
                     <Option id="dep_second_choice" placeholder="Second Choice * " name="dep_second_choice"
                             applicant={applicantInfo} value={applicantInfo?.dep_second_choice}
@@ -387,9 +387,9 @@ export default function RegistrationForm() {
                            height="h-auto" />
                     {errors.second_choice_motivation &&
                         <div className="text-sm text-red-600">{errors.second_choice_motivation}</div>}
-                          <hr className="border-t border-gray-300 my-6" />
-                        <p className=" font-montserrat text-white text-[14px] lg:text-[18px] font-medium text-left ml-4">
-                         Third choice ? *
+                    <hr className="border-t border-gray-300 my-6" />
+                    <p className=" font-montserrat text-white text-[14px] lg:text-[18px] font-medium text-left ml-4">
+                        Third choice ? *
                     </p>
                     <Option id="dep_third_choice" placeholder="Third Choice * " name="dep_third_choice"
                             applicant={applicantInfo} value={applicantInfo?.dep_third_choice}
@@ -441,10 +441,10 @@ export default function RegistrationForm() {
                 >
                 </Image>
                 <Button1 text="Submit now!" onSubmit={async () => {
-                        setInsertionError("");
-                        setInsertionMessage("");
-                        await register();
-                    }} ></Button1>
+                    setInsertionError("");
+                    setInsertionMessage("");
+                    await register();
+                }}></Button1>
             </div>
         </>
     );
