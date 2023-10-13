@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import ManagerContact from "./ManagerContact";
 
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import "./team.css";
+import Image from "next/image";
 
 interface cardprops {
     name: string,
@@ -46,16 +47,21 @@ export default function TeamCard({
                  onClick={handleClick}
             >
 
-                <img
-                    className="rounded-full w-[130px] h-[130px] "
-                    src={img}
-                    alt=""
-                />
+                <div className={"w-[130px] h-[130px]"}>
+                    <Image
+                        className="rounded-[50%] w-[130px] h-[130px]"
+                        src={img}
+                        alt={name}
+                        width={130}
+                        height={130}
 
-                <div className="flex flex-col items-center relative">
+                    />
+                </div>
+
+                <div className="flex flex-col items-center justify-center h-full relative">
                     <div className="flex flex-col items-center justify-center gap-4  ">
 
-                        <p className="text-center text-white  text-[14px] font-normal px-4 font-comfortaa hidden md:flex">
+                        <p className="text-center text-white text-[14px] font-normal px-4 font-comfortaa hidden md:flex">
                             {desc}
                         </p>
 
@@ -80,10 +86,11 @@ export default function TeamCard({
                         </div>
 
 
-                        <div className="contact bottom-0 md:relative">
-                            <ManagerContact githubLink={github} emailLink={email} linkedinLink={linkedin} />
-                        </div>
                     </div>
+
+                </div>
+                <div className="contact bottom-0 md:relative">
+                    <ManagerContact githubLink={github} emailLink={email} linkedinLink={linkedin} />
                 </div>
             </div>
 
