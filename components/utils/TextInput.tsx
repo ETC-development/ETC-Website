@@ -6,10 +6,11 @@ interface ITextInput {
     type: "text" | "email" | "password";
     name: string;
     id: string;
+    value?: string;
     setInputValue: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function TextInput({ placeholder, id, name, type, setInputValue }: ITextInput) {
+export default function TextInput({ placeholder, id, name, type, value, setInputValue }: ITextInput) {
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
     };
@@ -24,6 +25,7 @@ export default function TextInput({ placeholder, id, name, type, setInputValue }
                 placeholder={placeholder}
                 type={type}
                 name={name}
+                value={value}
                 id={id}
                 className="relative bg-[#323232]/40 px-6 py-3 w-full outline-none border-[0.5px] rounded-full border-silver-white/60 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] text-silver-white placeholder:text-silver-white/80"
             />
