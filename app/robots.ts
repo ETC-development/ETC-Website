@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: '/private/',
+            disallow: '/registrations',
         },
         sitemap: 'https://etc-club.vercel.app/sitemap.xml',
     }
