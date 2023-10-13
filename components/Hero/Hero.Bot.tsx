@@ -93,7 +93,7 @@ export default function HeroBot({ clubInfo }: IHeroProps) {
 
         <div
             className="stat-componenet top-[75%] sm:top-[40%] sm:left-[80%] md:top-[75%] lg:top-[95%] left-[70%]  md:left-[60%] lg:left-[63%] w-fit md:w-[35%] absolute">
-            <Statistics text={`${clubInfo.num_events} Events`} icon={eventsIcon} detail="8 External ones"
+            <Statistics text={`${clubInfo.num_events} Events`} icon={eventsIcon} detail=""
                         direction={-20}></Statistics>
         </div>
 
