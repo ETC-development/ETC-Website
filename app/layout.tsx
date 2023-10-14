@@ -33,8 +33,11 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "ETC Club",
-  description: "ENSIA Tech Community, a scientific club founded in March 2022, is the National School of Artificial Intelligence's central location for technology and computer science. Join us for projects, courses, and events geared toward tech enthusiasts of all skill levels. Together, let's unleash your potential and create a world driven by technology.",
+    title: "ETC Club",
+    description: "ENSIA Tech Community, a scientific club founded in March 2022, is the National School of Artificial Intelligence's central location for technology and computer science. Join us for projects, courses, and events geared toward tech enthusiasts of all skill levels. Together, let's unleash your potential and create a world driven by technology.",
+    verification: {
+        google: "IPC6k4BiPCBmR3gKaohNWdTyziah0_EkMB7XRQspPI8"
+    }
 };
 
 export default function RootLayout({
