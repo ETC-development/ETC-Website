@@ -409,7 +409,7 @@ export default function RegistrationForm() {
                     <p className=" font-montserrat text-white text-[18px] lg:text-[20px] font-medium text-left mt-4">
                         . Why should we choose you over the other applicants ?
                     </p>
-                    <Input id="selection_justification" placeholder="Your answer here" type="text"
+                    <Input isTextField={true} id="selection_justification" placeholder="Your answer here" type="text"
                            name="selection_justification" applicant={applicantInfo}
                            value={applicantInfo?.selection_justification} setInputValue={setApplicantInfo}
                            height="h-[160px]" />
