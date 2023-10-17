@@ -1,6 +1,7 @@
+"use client"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@/lib/database.types";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 
 
 export async function signOutFromDiscord(router: AppRouterInstance) {
@@ -8,26 +9,24 @@ export async function signOutFromDiscord(router: AppRouterInstance) {
 
     await supabase.auth.signOut()
 
-    router.refresh()
+    router.replace("/registrations")
 
     location.reload()
 
 }
 
-export async function signInWithDiscord(router: AppRouterInstance) {
+export async function signInWithDiscord(router: any) {
 
     const supabase = createClientComponentClient<Database>()
 
     const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'discord',
         options:{
-            // skipBrowserRedirect: true,
-            // redirectTo:
-            redirectTo: `${location.origin}/auth/callback`
+            redirectTo: `${location.origin}/registrations`
         }
 
     })
 
-    router.refresh()
+    // router.refresh()
 
 }
