@@ -1,7 +1,6 @@
 "use client"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@/lib/database.types";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 
 
 export async function signOutFromDiscord(router: any) {
