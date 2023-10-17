@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/callback/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/callback/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/registrations/discord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/discord.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

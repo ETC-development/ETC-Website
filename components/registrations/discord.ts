@@ -4,7 +4,7 @@ import { Database } from "@/lib/database.types";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 
 
-export async function signOutFromDiscord(router: AppRouterInstance) {
+export async function signOutFromDiscord(router: any) {
     const supabase = createClientComponentClient<Database>()
 
     await supabase.auth.signOut()
