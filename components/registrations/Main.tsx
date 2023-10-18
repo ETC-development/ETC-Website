@@ -6,6 +6,7 @@ import Link from "next/link";
 import RegistrationForm from "@/components/registrations/RegForm";
 import StayTuned from "@/components/registrations/StayTuned";
 import { useEffect, useState } from "react";
+import RegClosed from "@/components/registrations/RegClosed";
 
 
 interface ITimeLeft {
@@ -70,9 +71,10 @@ export default function Main() {
                 </Image>
             </Link>
             {/*<RegistrationForm />*/}
-            {Object.keys(timeLeft).length === 0 ? <RegistrationForm /> :
-                <StayTuned days={(timeLeft as ITimeLeft).days} seconds={(timeLeft as ITimeLeft).seconds}
-                           minutes={(timeLeft as ITimeLeft).minutes} hours={(timeLeft as ITimeLeft).hours} />}
+            <RegClosed />
+            {/*{Object.keys(timeLeft).length === 0 ? <RegistrationForm /> :*/}
+            {/*    <StayTuned days={(timeLeft as ITimeLeft).days} seconds={(timeLeft as ITimeLeft).seconds}*/}
+            {/*               minutes={(timeLeft as ITimeLeft).minutes} hours={(timeLeft as ITimeLeft).hours} />}*/}
         </div>
     );
 }

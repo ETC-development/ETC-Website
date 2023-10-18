@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1aa3f30-c17d-427f-87e1-91289a3a0f1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/callback/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/callback/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registrations/discord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/discord.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/registrations/RegClosed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registrations/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/registrations/Main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +32,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "salah/try-fix-safari-auth-bug",
-    "last_opened_file_path": "/home/froggy/git-clones/ETC-Website/app",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/froggy/git-clones/ETC-Website/components/registrations",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +61,7 @@
       <workItem from="1696019868939" duration="13565000" />
       <workItem from="1696165912269" duration="607000" />
       <workItem from="1696369442768" duration="7097000" />
+      <workItem from="1697672263958" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="merge PR">
       <option name="closed" value="true" />
