@@ -32,12 +32,16 @@ const handleSubmit =
             };
 
             try {
-                const requests = [
-                    await fetch(NewsLetterConfig.API_URL, options),
-                    await fetch("/api/tx", options)
-                ];
+                // const requests = [
+                //     await fetch(NewsLetterConfig.API_URL, options),
+                //     await fetch("/api/tx", options)
+                // ];
 
-                const results = await Promise.all(requests);
+                const subFetchRes = await fetch(NewsLetterConfig.API_URL, options);
+
+                const transactionalFetchRes = await fetch("/api/tx", options)
+
+                const results = [subFetchRes, transactionalFetchRes]
 
                 results.forEach((res) => {
                     if (res.status !== 200) throw Error("Request Failed");
