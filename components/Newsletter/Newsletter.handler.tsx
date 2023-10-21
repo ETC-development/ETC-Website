@@ -50,7 +50,7 @@ const handleSubmit =
 
                 setMessage({
                     status: "success",
-                    text: "Subscribed successfully"
+                    text: "Subscribed! Check your email"
                 });
                 setEmail("");
             } catch (e) {
