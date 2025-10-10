@@ -70,8 +70,8 @@ export default function Main() {
                 >
                 </Image>
             </Link>
-            {/*<RegistrationForm />*/}
-            <RegClosed />
+            <RegistrationForm />
+            {/*<RegClosed />*/}
             {/*{Object.keys(timeLeft).length === 0 ? <RegistrationForm /> :*/}
             {/*    <StayTuned days={(timeLeft as ITimeLeft).days} seconds={(timeLeft as ITimeLeft).seconds}*/}
             {/*               minutes={(timeLeft as ITimeLeft).minutes} hours={(timeLeft as ITimeLeft).hours} />}*/}

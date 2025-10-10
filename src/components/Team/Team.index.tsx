@@ -16,7 +16,7 @@ import { Database } from "@/lib/database.types";
 
 
 interface ITeamMembers {
-    teamMembers: Database["public"]["Tables"]["managers"]["Row"][];
+    teamMembers: Database["public"]["Tables"]["managers-2k25-2k26"]["Row"][];
 }
 
 
@@ -29,13 +29,17 @@ export default function Team({teamMembers}: ITeamMembers) {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
 
-    const activeManager = teamMembers[activeSlideIndex];
+    const activeManager = teamMembers?.[activeSlideIndex];
     const [thirdSwiper, setThirdSwiper] = useState<SwiperCore>();
+
+    if (!teamMembers || teamMembers.length === 0) {
+        return <div className="text-white">No team members found</div>;
+    }
 
     return (
         <div className="justify-center w-screen py-9 flex flex-col items-center  gap-12 relative" id="Team">
             <p className="text-white font-azonix text-3xl md:text-6xl font-normal ">
-                Managers
+                Meet Our Staff
             </p>
 
             <div className="flex w-full">
@@ -67,7 +71,7 @@ export default function Team({teamMembers}: ITeamMembers) {
                         }}
                         className="swiper_container w-full md:w-[60%] md:!m-0  "
                     >
-                        {teamMembers.map(({email, education_level, fullname, github_link, linkedin_link, profile_pic_url, role, manager_id, description}, index) => (
+                        {teamMembers?.map(({email, education_level, fullname, github_link, linkedin_link, profile_pic_url, role, manager_id, description}, index) => (
                             <SwiperSlide className="!w-auto swiper-slide-team" key={manager_id}>
                                 <TeamCard
                                     // isActive={index === activeSlideIndex}
@@ -94,20 +98,22 @@ export default function Team({teamMembers}: ITeamMembers) {
                     </Swiper>
                 </div>
 
-                <div
-                    className="hidden flex-grow md:flex flex-col items-center justify-center text-center gap-[10px] mr-10"
-                    id="slide"
-                    onChange={handleChange}
-                >
-                    <p className="text-center font-azonix md:text-[35px] font-normal manager_title ">
-                        {activeManager.role}
-                    </p>
-                    <p className="text-white text-[28px] font-montserrat ">{activeManager.fullname}</p>
-                    <div className="flex flex-col text-[14px] text-gray-300 font-montserrat">
-                       {/*<div> {activeManager.talent}</div>*/}
-                       <div> {activeManager.education_level}</div>
+                {activeManager && (
+                    <div
+                        className="hidden flex-grow md:flex flex-col items-center justify-center text-center gap-[10px] mr-10"
+                        id="slide"
+                        onChange={handleChange}
+                    >
+                        <p className="text-center font-azonix md:text-[35px] font-normal manager_title ">
+                            {activeManager.role}
+                        </p>
+                        <p className="text-white text-[28px] font-montserrat ">{activeManager.fullname}</p>
+                        <div className="flex flex-col text-[14px] text-gray-300 font-montserrat">
+                           {/*<div> {activeManager.talent}</div>*/}
+                           <div> {activeManager.education_level}</div>
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );

@@ -35,7 +35,7 @@ export default function Option({
       }}
     >
 
-        <option value="" selected>{placeholder}</option> 
+        <option value="">{placeholder}</option> 
 
       {options.map((option) => (
         <option key={option} value={option}>

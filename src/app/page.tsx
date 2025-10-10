@@ -25,7 +25,7 @@ export default async function Home() {
         supabase.from("club_info").select("*").single(),
         supabase.from("projects").select("*").order("id", { ascending: true }),
         supabase.from("events").select("*").order("id", { ascending: true }),
-        supabase.from("managers").select("*").order("manager_id", { ascending: true })
+        supabase.from("managers-2k25-2k26").select("*").order("manager_id", { ascending: true })
     ]);
 
     // Return empty if essential data is missing

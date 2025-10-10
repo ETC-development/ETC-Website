@@ -120,7 +120,7 @@ export interface Database {
         }
         Relationships: []
       }
-      managers: {
+      "managers-2k25-2k26": {
         Row: {
           description: string
           education_level: string

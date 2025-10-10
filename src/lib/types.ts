@@ -9,7 +9,7 @@ import { Database } from "@/lib/database.types";
 export type ClubInfo = Database["public"]["Tables"]["club_info"]["Row"];
 export type Event = Database["public"]["Tables"]["events"]["Row"];
 export type Project = Database["public"]["Tables"]["projects"]["Row"];
-export type Manager = Database["public"]["Tables"]["managers"]["Row"];
+export type Manager = Database["public"]["Tables"]["managers-2k25-2k26"]["Row"];
 export type Registration = Database["public"]["Tables"]["registration"]["Row"];
 export type Admin = Database["public"]["Tables"]["admins"]["Row"];
 

@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import "./team.css";
 import Image from "next/image";
+import { convertGoogleDriveUrl } from "@/lib/imageUtils";
+
+
 
 interface cardprops {
     name: string,
@@ -47,15 +50,26 @@ export default function TeamCard({
                  onClick={handleClick}
             >
 
-                <div className={"w-[130px] h-[130px]"}>
-                    <Image
-                        className="rounded-[50%] w-[130px] h-[130px]"
-                        src={img}
-                        alt={name}
-                        width={130}
-                        height={130}
-
-                    />
+                <div className="w-[130px] h-[130px] flex-shrink-0">
+                    {(() => {
+                        console.log("🔍 DEBUG - Profile URL:", img);
+                        return null;
+                    })()}
+                    {img ? (
+                        <Image
+                            src={convertGoogleDriveUrl(img)}
+                            alt={`${name} profile`}
+                            width={130}
+                            height={130}
+                            className="w-[130px] h-[130px] rounded-full object-cover"
+                            onLoad={() => console.log("✅ Image loaded:", name, convertGoogleDriveUrl(img))}
+                            onError={() => console.log("❌ Image failed:", name, convertGoogleDriveUrl(img))}
+                        />
+                    ) : (
+                        <div className="w-[130px] h-[130px] bg-gray-300 rounded-full flex items-center justify-center text-2xl font-medium text-gray-600">
+                            {name?.charAt(0)?.toUpperCase() || "?"}
+                        </div>
+                    )}
                 </div>
 
                 <div className="flex flex-col items-center justify-center h-full relative">

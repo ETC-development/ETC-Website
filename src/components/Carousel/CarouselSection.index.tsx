@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,6 +29,14 @@ const CarouselSection = ({
     const [highlightedCard, setHighlightedCard] = useState(0);
     const [firstSwiper, setFirstSwiper] = useState<SwiperCore>();
     const [secondSwiper, setSecondSwiper] = useState<SwiperCore>();
+
+    // Handle slide navigation properly
+    const handleSlideToIndex = useCallback((index: number) => {
+        setHighlightedCard(index);
+        if (secondSwiper) {
+            secondSwiper.slideTo(index + 1); // +1 because of the empty slide at the beginning
+        }
+    }, [secondSwiper]);
 
 
 
@@ -81,24 +89,14 @@ const CarouselSection = ({
                         </Swiper>
 
                         <button
-                            onClick={() => {
-                                setFirstSwiper((swiper) => {
-                                    swiper?.slidePrev();
-                                    return swiper;
-                                });
-                            }}
-                            className={`.arrow-right-${sectionTitle} cursor-pointer top-2/4 lg:hidden absolute  mt-[-5px] -translate-y-2/4`}
+                            onClick={() => firstSwiper?.slidePrev()}
+                            className={`arrow-right-${sectionTitle} cursor-pointer top-2/4 lg:hidden absolute  mt-[-5px] -translate-y-2/4`}
                         >
                             <Image src={leftArrow} alt="left arrow" width={30} height={40} />
                         </button>
                         <button
-                            onClick={()=>{
-                                setFirstSwiper((swiper) => {
-                                    swiper?.slideNext();
-                                    return swiper;
-                                })
-                            }}
-                            className={`.arrow-left-${sectionTitle} cursor-pointer top-2/4 lg:hidden right-0 -translate-y-2/4 absolute  mt-[-5px]`}
+                            onClick={() => firstSwiper?.slideNext()}
+                            className={`arrow-left-${sectionTitle} cursor-pointer top-2/4 lg:hidden right-0 -translate-y-2/4 absolute  mt-[-5px]`}
                         >
                             <Image src={rightArrow} alt="right arrow" width={30} height={40} />
                         </button>
@@ -142,13 +140,7 @@ const CarouselSection = ({
                                     isHighlighted={highlightedCard === index}
                                     cardTitle={data.title}
                                     cardImage={data.logo_link}
-                                    handleClick={() => {
-                                        setHighlightedCard(index);
-                                        setSecondSwiper((e) => {
-                                            e?.slideTo(index);
-                                            return e;
-                                        });
-                                    }}
+                                    handleClick={() => handleSlideToIndex(index)}
                                 />
                             </SwiperSlide>
                         ))}
