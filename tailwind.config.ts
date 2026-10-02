@@ -1,33 +1,32 @@
 import type { Config } from "tailwindcss";
 
+// Tokens mirror the CSS variables in src/app/globals.css (identity system v2).
 const config: Config = {
-  
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        cyan: "#00B1E5",
-        green: "#00F186",
-        "dark-green": "#10221B",
-        "less-dark-green": "#074F57",
-        "black-carbon": "#0C0A00",
-        "silver-white": "#DADBDD",
-        "bg-color": "#002529",
-        "heart": "#00F186",
-      },
-      fontFamily: {
-        azonix: ["var(--font-azonix)", "sans-serif"],
-        montserrat: ["var(--font-montserrat)", "sans"],
-        comfortaa: ["var(--font-comfortaa)", "sans"],
-      },
+    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+    theme: {
+        extend: {
+            colors: {
+                abyss: "#040D12",
+                deep: "#0A1A21",
+                trench: "#10252E",
+                foam: "#E9F3F1",
+                fog: "#8FA3A6",
+                signal: "#19F08B",
+                cyan: "#12C2F0",
+                ink: "#04140D",
+                etcode: "#FF8A2A",
+                danger: "#FF6B5E",
+            },
+            fontFamily: {
+                azonix: ["var(--font-azonix)", "Archivo", "sans-serif"],
+                archivo: ["var(--font-archivo)", "ui-sans-serif", "system-ui", "sans-serif"],
+                mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+            },
+            maxWidth: {
+                wrap: "1320px",
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 };
 export default config;

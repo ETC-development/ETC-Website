@@ -1,43 +1,23 @@
-import Main from "@/components/registrations/Main";
-import "@/components/registrations/registration.css";
-import Footer from "@/components/Footer/Footer.index";
-import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
-import AuthProvider from "@/components/auth/AuthProvider";
-import { createServerSupabaseClient } from "@/lib/supabase/server";
+import type { Metadata } from "next";
+import { RegisterClosed, RegisterFlow, RegisterHeader } from "@/components/register";
+import { CLUB, REGISTRATION } from "@/data/club";
 
-export const revalidate = 0;
-
-export const metadata = {
-    title: "Join ETC Club - Member Registration",
-    description: "Apply to join ENSIA Tech Community. Register and select your preferred department.",
+export const metadata: Metadata = {
+    title: "Join ETC",
+    description:
+        "Apply to join ENSIA Tech Community: connect Discord, rank your three cells, tell us about you.",
 };
 
-export default async function RegistrationPage() {
-    const supabase = await createServerSupabaseClient();
-
-    const {
-        data: { session }
-    } = await supabase.auth.getSession();
-
-    const accessToken = session?.access_token || null;
-
-    const { data: clubInfoData } = await supabase
-        .from("club_info")
-        .select("*")
-        .single();
-
-    if (!clubInfoData) return null;
-
+export default function RegistrationPage() {
+    const club = CLUB;
     return (
-        <AuthProvider accessToken={accessToken}>
-            <div className="bgGradientPage">
-                <div className="flex items-center justify-center py-6 lg:py-20">
-                    <Main />
-                </div>
-                <FadeInWhenVisible>
-                    <Footer clubInfo={clubInfoData} />
-                </FadeInWhenVisible>
-            </div>
-        </AuthProvider>
+        <div className="rg">
+            <RegisterHeader />
+            {REGISTRATION.open ? (
+                <RegisterFlow discordInvite={club.discord_link} />
+            ) : (
+                <RegisterClosed discordInvite={club.discord_link} />
+            )}
+        </div>
     );
 }

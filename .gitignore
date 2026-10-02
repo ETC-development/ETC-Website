@@ -128,3 +128,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# OS and tooling
+.DS_Store
+.remember/
+.playwright-mcp/
+
+pics

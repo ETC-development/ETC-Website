@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ETC website
 
-## Getting Started
+Website of ETC, ENSIA Tech Community, the first scientific club of ENSIA (National School of Artificial Intelligence, Algiers). Live at https://etc-club.vercel.app.
 
-First, run the development server:
+## Stack
+
+- Next.js 15 (App Router), React 18, TypeScript
+- Tailwind CSS 3
+- Supabase: registrations and Discord OAuth only
+- Listmonk: FOSS Flash newsletter, called from `src/app/api/tx`
+
+## Getting started
 
 ```bash
+cp .env.example .env.local   # fill in Supabase and Listmonk values
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The package manager is npm (`package-lock.json`). Do not add a second lockfile.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+All site content lives in `src/data/`, one file per topic. Edit the file, commit, and Vercel redeploys.
 
-## Learn More
+| File | What it holds |
+|---|---|
+| `club.ts` | Name, contact links, hero numbers, nav, registration switch (`REGISTRATION.open`) |
+| `events.ts` | Jellyfish events (`SEASON_EVENTS`) and "Beyond the season" (`OTHER_EVENTS`) |
+| `projects.ts` | Project cards, Tech Days list, featured ETCast episode |
+| `cells.ts` | The cells and which ones applicants can rank (`apply`) |
+| `crew.ts` | President, the three key people, managers. Portraits go in `public/crew/` |
+| `partners.ts` | "They trusted us" logos. Files go in `public/companies/` (transparent background) |
+| `feed.ts` | Instagram highlight grid |
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+src/app            routes: / (home), /events/etcode, /registrations, /auth/callback, /api/tx
+src/data           all site content (see above)
+src/components     ui (icons, mascot), sections (home), interactive (client widgets), register
+src/lib            crew helper, Supabase clients, generated database types
+public             logos, icons, fonts (Azonix), photos, crew portraits
+```
