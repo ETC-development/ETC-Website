@@ -13,8 +13,6 @@ export async function GET(request: NextRequest) {
         await supabase.auth.exchangeCodeForSession(code);
     }
 
-    console.log("Discord OAuth callback processed");
-
     // Redirect to registrations page
     return NextResponse.redirect(`${origin}/registrations`);
 }

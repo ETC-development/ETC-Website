@@ -18,8 +18,6 @@ export async function POST(req: NextRequest) {
 
         const { data } = await subscribe({ email });
 
-        console.log("Newsletter subscription:", data);
-
         return NextResponse.json(data, { status: 200 });
     } catch (error) {
         console.error("Error in newsletter API:", error);

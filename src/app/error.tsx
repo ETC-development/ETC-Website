@@ -1,6 +1,7 @@
-'use client';
-
-import { useEffect } from 'react';
+"use client";
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Error({
     error,
@@ -10,54 +11,38 @@ export default function Error({
     reset: () => void;
 }) {
     useEffect(() => {
-        // Log the error to an error reporting service
-        console.error('Application error:', error);
+        console.error("Application error:", error);
     }, [error]);
-
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 px-4">
-            <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-2xl">
-                <div className="mb-6 flex justify-center">
-                    <svg
-                        className="h-16 w-16 text-red-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                        />
-                    </svg>
-                </div>
-                <h2 className="mb-4 text-center text-2xl font-bold text-gray-800">
-                    Something went wrong!
-                </h2>
-                <p className="mb-6 text-center text-gray-600">
-                    We apologize for the inconvenience. Please try again.
+        <main id="main" className="split" style={{ minHeight: "100vh" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+                <span className="mono" style={{ color: "var(--danger)" }}>
+                    Signal lost
+                </span>
+                <h1 className="az" style={{ margin: 0, fontSize: "clamp(40px, 6vw, 80px)" }}>
+                    Something <span className="gtext">broke</span>
+                </h1>
+                <p className="fog" style={{ margin: 0, maxWidth: "42ch", fontSize: 19 }}>
+                    The page hit an error on our side. Try again, and if it keeps happening tell us
+                    on Discord.
                 </p>
-                {error.message && (
-                    <div className="mb-4 rounded-md bg-red-50 p-3">
-                        <p className="text-sm text-red-800">{error.message}</p>
-                    </div>
-                )}
-                <div className="flex flex-col gap-3">
-                    <button
-                        onClick={reset}
-                        className="w-full rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
-                    >
+                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    <button className="btn btn-glow chamfer" onClick={reset}>
                         Try again
                     </button>
-                    <a
-                        href="/"
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 text-center font-semibold text-gray-700 transition-colors hover:bg-gray-100"
-                    >
-                        Go home
-                    </a>
+                    <Link className="btn btn-line" href="/">
+                        Back to ETC
+                    </Link>
                 </div>
             </div>
-        </div>
+            <div className="botcol" style={{ display: "flex", justifyContent: "center" }}>
+                <img
+                    className="bot bob"
+                    src="/mascots/bot-phone.svg"
+                    alt=""
+                    style={{ width: "min(300px, 70%)", height: "auto" }}
+                />
+            </div>
+        </main>
     );
 }

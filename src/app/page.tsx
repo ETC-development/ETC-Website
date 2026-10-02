@@ -1,67 +1,37 @@
-import Events from "@/components/Events/Events.index";
-import Footer from "@/components/Footer/Footer.index";
-import Hero from "@/components/Hero/Hero.index";
-import Navbar from "@/components/NavBar/Navbar.index";
-import Newsletter from "@/components/Newsletter/Newsletter.index";
-import Projects from "@/components/Projects/Projects.index";
-import Team from "@/components/Team/Team.index";
-import Background from "@/components/background/Background";
-import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
-import { createServerSupabaseClient } from "@/lib/supabase/server";
+import {
+    CellsSection,
+    Crew,
+    Feed,
+    Footer,
+    Header,
+    Hero,
+    Join,
+    Manifesto,
+    ScrollChrome,
+    Shipped,
+    UniverseSection,
+} from "@/components/sections";
+import { CLUB as club } from "@/data/club";
+import { OTHER_EVENTS, SEASON_EVENTS } from "@/data/events";
+import { PROJECTS } from "@/data/projects";
+import { CREW } from "@/lib/data";
 
-// Enable ISR with revalidation
-export const revalidate = 3600; // Revalidate every hour
-
-export default async function Home() {
-    const supabase = await createServerSupabaseClient();
-
-    // Parallel data fetching for better performance
-    const [
-        { data: clubInfoData, error: infoError },
-        { data: projects, error: projectsError },
-        { data: events, error: eventsError },
-        { data: teamMembers, error: teamError }
-    ] = await Promise.all([
-        supabase.from("club_info").select("*").single(),
-        supabase.from("projects").select("*").order("id", { ascending: true }),
-        supabase.from("events").select("*").order("id", { ascending: true }),
-        supabase.from("managers-2k25-2k26").select("*").order("manager_id", { ascending: true })
-    ]);
-
-    // Return empty if essential data is missing
-    if (!clubInfoData) return null;
-
+export default function Home() {
     return (
-        <div className="flex flex-col gap-20 overflow-hidden">
-            <Background />
-            <Navbar />
-            <Hero clubInfo={clubInfoData} />
-
-            {events && events.length > 0 && (
-                <FadeInWhenVisible>
-                    <Events events={events} />
-                </FadeInWhenVisible>
-            )}
-
-            {projects && projects.length > 0 && (
-                <FadeInWhenVisible>
-                    <Projects projects={projects} />
-                </FadeInWhenVisible>
-            )}
-
-            {teamMembers && teamMembers.length > 0 && (
-                <FadeInWhenVisible>
-                    <Team teamMembers={teamMembers} />
-                </FadeInWhenVisible>
-            )}
-
-            <FadeInWhenVisible>
-                <Newsletter clubInfo={clubInfoData} />
-            </FadeInWhenVisible>
-
-            <FadeInWhenVisible>
-                <Footer clubInfo={clubInfoData} />
-            </FadeInWhenVisible>
-        </div>
+        <>
+            <ScrollChrome />
+            <Header club={club} />
+            <main id="main" style={{ position: "relative", zIndex: 2 }}>
+                <Hero club={club} />
+                <Manifesto club={club} />
+                <UniverseSection events={SEASON_EVENTS} other={OTHER_EVENTS} club={club} />
+                <Shipped projects={PROJECTS} />
+                <CellsSection />
+                <Crew crew={CREW} />
+                <Feed club={club} />
+                <Join club={club} />
+            </main>
+            <Footer club={club} />
+        </>
     );
 }
